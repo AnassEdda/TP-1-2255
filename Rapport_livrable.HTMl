@@ -219,17 +219,21 @@
                     <dt class="glossary-term">GoodPeople</dt>
                     <dd class="glossary-def">Organisme à but non lucratif qui a entrepris lìnitiative VaxTodo</dd>
                     <dt class="glossary-term">Bénévole</dt>
-                    <dd class="glossary-def">Personnnes responsables d'accueillir les visiteurs et de les acheminer aux employés</dd>
+                    <dd class="glossary-def">Personnnes responsables d'accueillir les visiteurs et de les acheminer aux
+                        employés</dd>
                     <dt class="glossary-term">Employé</dt>
-                    <dd class="glossary-def">Personnes responsables de faire le traitement le traitement du dossier et le choix du vaccin avec les visiteurs</dd>
+                    <dd class="glossary-def">Personnes responsables de faire le traitement le traitement du dossier et
+                        le choix du vaccin avec les visiteurs</dd>
                     <dt class="glossary-term">Visite planifiée</dt>
                     <dd class="glossary-def">Visite avec un visiteur qui a un rendez-vous</dd>
                     <dt class="glossary-term">Visite spontanée</dt>
                     <dd class="glossary-def">Visite avec un visiteur qui n'a pas de rendez-vous</dd>
                     <dt class="glossary-term">Questionnaire</dt>
-                    <dd class="glossary-def">Formulaire qui prend les ìnformations personnelles et les informations concernant la COVID19 d'un visiteur</dd>
+                    <dd class="glossary-def">Formulaire qui prend les ìnformations personnelles et les informations
+                        concernant la COVID19 d'un visiteur</dd>
                     <dt class="glossary-term">Plage horaire</dt>
-                    <dd class="glossary-def">Période d'une heure dans laquelle les visiteurs réservent leurs rendez-vous. Il peut y avoir un maximum de 15 rendez-vous par plage horaire</dd>
+                    <dd class="glossary-def">Période d'une heure dans laquelle les visiteurs réservent leurs
+                        rendez-vous. Il peut y avoir un maximum de 15 rendez-vous par plage horaire</dd>
                 </dl>
             </section>
 
@@ -241,70 +245,71 @@
                 </a>
 
                 <p>Scénarios
-                    <p><b>CU: Ajouter un rendez-vous</b><br>
-                        <b>But:</b> Une personne désire prendre rendez-vous pour un vaccin <br>
-                        <b>Acteurs</b> Employé (principal), Visiteur (secondaire) <br>
-                        <b>Scénario principal</b><br>
-                        1. Le visiteur appelle la réception de GoodPeople <br>
-                        2. L’employé lui demande le but de son appel. <br>
-                        3. Le visiteur émet son souhait de prendre un rendez-vous pour se faire vacciner<br>
-                        4. L’employé accède au calendrier à partir du système et vérifie les disponibilités.<br>
-                        5. Le visiteur effectue un choix de date parmi celles proposées .<br>
-                        6. L’employé lui demande ses informations et le but de sa visite.<br>
-                        7. L’employé entre les informations dans le système<br>
-                        8. Le système valide les informations.<br>
-                        9. Le système confirme la réservation et affiche le numéro unique de réservation du visiteur.<br>
-                        10. Le système envoie par courriel le numéro de réservation au visiteur .<br>
-                
-                        <b><br/>Scénarios alternatifs</b><br>
-                        5a. Le visiteur ne trouve aucune date qui lui convient.<br>
-                        5a.1. L’employé informe le visiteur qu’il n’y a aucune séance pour la période demandée<br>
-                        5a.2. Le scénario se termine.<br><br/>
-                        8a. Le système rejette certaines informations mal entrées.<br>
-                        8a.1. Le logiciel demande à l’employé d’entrer les données de nouveau.<br>
-                        8a.2. Le scenario reprend à l’étape 7.<br/><br/>
-                    </p>
-                
-                
-                    <p>
-                        <b>CU: Supprimer un rendez-vous</b><br>
-                        <b>But:</b> Un visiteur désire annuler un rendez-vous pris<br>
-                        <b>Acteurs:</b> Employé (principal), Visiteur (secondaire)<br>
-                        <b>Préconditions:</b>  Le visiteur a pris un rendez-vous chez GoodPeople<br>
-                        <b>Scénario principal</b><br>
-                        1. Le visiteur appelle la réception de GoodPeople<br>
-                        2. Le visiteur émet son souhait d’annuler son rendez vous.<br> 
-                        3. L’employé demande le numéro de réservation du visiteur.<br>
-                        4. L’employé effectue une recherche dans le système<br>
-                        5. L’employé clique sur "Annuler le rendez-vous" <br>
-                        6. Le système valide l’annulation.<br>
-                        7. Le système confirme la réservation et affiche le numéro unique de réservation du client.<br>
-                        8. Le système envoie par courriel un message d’annulation au visiteur.<br>
-                
-                        <b><br/>Sénarios alternatifs</b><br>
-                        4a. Le visiteur n’a pas le numéro de réservation.<br>
-                        4a.1. L’employé lui demande son nom et sa date de rendez-vous <br>
-                        4a.2. Le scénario continue à l’étape 5.<br><br/>
-                    </p>
-                    
+                <p><b>CU: Ajouter un rendez-vous</b><br>
+                    <b>But:</b> Une personne désire prendre rendez-vous pour un vaccin <br>
+                    <b>Acteurs</b> Employé (principal), Visiteur (secondaire) <br>
+                    <b>Scénario principal</b><br>
+                    1. Le visiteur appelle la réception de GoodPeople <br>
+                    2. L’employé lui demande le but de son appel. <br>
+                    3. Le visiteur émet son souhait de prendre un rendez-vous pour se faire vacciner<br>
+                    4. L’employé accède au calendrier à partir du système et vérifie les disponibilités.<br>
+                    5. Le visiteur effectue un choix de date parmi celles proposées .<br>
+                    6. L’employé lui demande ses informations et le but de sa visite.<br>
+                    7. L’employé entre les informations dans le système<br>
+                    8. Le système valide les informations.<br>
+                    9. Le système confirme la réservation et affiche le numéro unique de réservation du visiteur.<br>
+                    10. Le système envoie par courriel le numéro de réservation au visiteur .<br>
+
+                    <b><br />Scénarios alternatifs</b><br>
+                    5a. Le visiteur ne trouve aucune date qui lui convient.<br>
+                    5a.1. L’employé informe le visiteur qu’il n’y a aucune séance pour la période demandée<br>
+                    5a.2. Le scénario se termine.<br><br />
+                    8a. Le système rejette certaines informations mal entrées.<br>
+                    8a.1. Le logiciel demande à l’employé d’entrer les données de nouveau.<br>
+                    8a.2. Le scenario reprend à l’étape 7.<br /><br />
+                </p>
+
+
+                <p>
+                    <b>CU: Supprimer un rendez-vous</b><br>
+                    <b>But:</b> Un visiteur désire annuler un rendez-vous pris<br>
+                    <b>Acteurs:</b> Employé (principal), Visiteur (secondaire)<br>
+                    <b>Préconditions:</b> Le visiteur a pris un rendez-vous chez GoodPeople<br>
+                    <b>Scénario principal</b><br>
+                    1. Le visiteur appelle la réception de GoodPeople<br>
+                    2. Le visiteur émet son souhait d’annuler son rendez vous.<br>
+                    3. L’employé demande le numéro de réservation du visiteur.<br>
+                    4. L’employé effectue une recherche dans le système<br>
+                    5. L’employé clique sur "Annuler le rendez-vous" <br>
+                    6. Le système valide l’annulation.<br>
+                    7. Le système confirme la réservation et affiche le numéro unique de réservation du client.<br>
+                    8. Le système envoie par courriel un message d’annulation au visiteur.<br>
+
+                    <b><br />Sénarios alternatifs</b><br>
+                    4a. Le visiteur n’a pas le numéro de réservation.<br>
+                    4a.1. L’employé lui demande son nom et sa date de rendez-vous <br>
+                    4a.2. Le scénario continue à l’étape 5.<br><br />
+                </p>
+
                 <p><b>CU:Confirmer une visite </b> <br>
                     <b>But:</b> L’employé souhaite confirmer une visite <br>
                     <b>Acteurs:</b> Employé (principal) ; Visiteur (secondaire)<br>
                     <b>Scénario principal</b><br>
                     1. Le visiteur se présente à l’accueil.<br>
-                    2. Le bénévole consulte la version imprimée du calendrier et vérifie si le visiteur a un rendez-vous.<br>
+                    2. Le bénévole consulte la version imprimée du calendrier et vérifie si le visiteur a un
+                    rendez-vous.<br>
                     3. Le bénévole dirige le visiteur vers une file d’attente de visites planifiées<br>
                     4. Le bénévole appelle le visiteur et le dirige vers l’employé<br>
                     5. L’employé demande les informations du visiteur<br>
                     6. L’employé effectue une recherche du visiteur dans le système<br>
                     7. L’employé confirme l’heure de visite dans le système<br>
                     8. L’employé confirme le but de sa visite dans le système<br>
-                    <b><br/>Scénario alternatif</b><br>
+                    <b><br />Scénario alternatif</b><br>
                     2a. Le visiteur n’a pas rendez-vous<br>
-                      2a.1. Le bénévole dirige le visiteur vers une file d’attente de visites spontanées .<br>
-                      2a.2. Le scénario reprend à l’étape 4.<br/><br/>
+                    2a.1. Le bénévole dirige le visiteur vers une file d’attente de visites spontanées .<br>
+                    2a.2. Le scénario reprend à l’étape 4.<br /><br />
                 </p>
-                
+
                 <p> <b>CU: Créer un compte visiteur</b><br>
                     <b>But:</b> Un visiteur souhaite prendre une première dose<br>
                     <b>Acteurs:</b> Employé (principal), Visiteur (secondaire)<br>
@@ -313,48 +318,49 @@
                     1. L’employé confirme la visite.<br>
                     2. L’employé entre les informations du visiteur dans le système .<br>
                     3. L’employé clique sur ajouter<br>
-                    4. Le système valide les informations<br>   
+                    4. Le système valide les informations<br>
                     5. Le système confirme la création et affiche le numéro unique du visiteur.<br>
                     6. L’employé communique le numéro au visiteur.<br>
-                
-                    <b><br/>Scénarios alternatifs</b><br>
+
+                    <b><br />Scénarios alternatifs</b><br>
                     4a. Le système rejette certaines informations mal
-                     entrées.<br>
+                    entrées.<br>
                     4a.1. Le logiciel demande à l’employé d’entrer les données de nouveau.<br>
-                    4a.2. Le scénario reprend à l’étape 3.<br><br/>
+                    4a.2. Le scénario reprend à l’étape 3.<br><br />
                 </p>
                 <p>
                     <b>CU: Supprimer un compte visiteur</b><br>
                     <b>But:</b> L'employé souhaite supprimer un compte visiteur<br>
                     <b>Acteurs:</b> Employé (principal), Visiteur (secondaire)<br>
-                    <b>Préconditions:</b> Le visiteur a un compte visiteur à GoodPeople , le visiteur n’a pas encore été vacciné<br>
+                    <b>Préconditions:</b> Le visiteur a un compte visiteur à GoodPeople , le visiteur n’a pas encore été
+                    vacciné<br>
                     <b>Scénario principal</b><br>
                     1. L’employé entre les informations du visiteur. <br>
                     2. L’employé effectue une recherche dans le système. <br>
                     3. L’employé clique sur supprimer.<br>
                     4. Le système valide la suppression .<br>
-                    
-                    <b><br/>Scénarios alternatifs</b><br>
+
+                    <b><br />Scénarios alternatifs</b><br>
                     2a. Le système ne retrouve pas le compte<br>
                     2.a.1. L’employé fait une recherche par le nom.<br>
-                    2.a.2. Le scénario se poursuit à l’étape 3.<br><br/>
+                    2.a.2. Le scénario se poursuit à l’étape 3.<br><br />
                 </p>
-                
+
                 <p>
                     <b>CU: Modifier un compte visiteur</b><br>
-                    <b>But:</b> L’employé  souhaite modifier le compte visiteur<br>
+                    <b>But:</b> L’employé souhaite modifier le compte visiteur<br>
                     <b>Acteurs:</b> Employé (principal), Visiteur (secondaire)<br>
-                    <b>Préconditions:</b>  Le visiteur a un compte visiteur à GoodPeople <br> 
+                    <b>Préconditions:</b> Le visiteur a un compte visiteur à GoodPeople <br>
                     <b>Scénario principal</b> <br>
                     1. L’employé se connecte au système.<br>
                     2. L’employé effectue une recherche sur le compte concerné.<br>
                     3. L’employé clique sur Modifier compte.<br>
-                    4. L’employé rentre les nouvelles informations.<br> 
+                    4. L’employé rentre les nouvelles informations.<br>
                     5. Le système valide la modification.<br>
-                    <b><br/>Scénarios alternatifs</b><br>
+                    <b><br />Scénarios alternatifs</b><br>
                     4a. Les informations sont incorrectes<br>
                     4.a.1. L’employé rentre à nouveau les informations.<br>
-                    4.a.2. Le scénario se poursuit à l’étape 5.<br><br/>
+                    4.a.2. Le scénario se poursuit à l’étape 5.<br><br />
                 </p>
                 <p>
                     <b>CU: Mettre en place une entrevue </b><br>
@@ -366,32 +372,33 @@
                     3. L’employé se connecte au système et remplie le questionnaire <br>
                     4. L’employé imprime le questionnaire et le remet au visiteur <br>
                     5. Le visiteur signe le formulaire <br>
-                
-                    <b><br/>Scénario alternatif</b><br>
+
+                    <b><br />Scénario alternatif</b><br>
                     2a. Le visiteur n’a pas de carte d’assurance maladie ou est expirée.<br>
                     2a.1. La visite est annulée.<br>
-                    2a.2. Le scénario se termine.<br><br/>
+                    2a.2. Le scénario se termine.<br><br />
                 </p>
                 <p>
-                    <b>CU:Planifier une seconde dose </b><br> 
+                    <b>CU:Planifier une seconde dose </b><br>
                     <b>But: </b>Un visiteur souhaite planifier une seconde dose<br>
                     <b>Acteurs:</b> Employé (principal), Visiteur (secondaire)<br>
-                    <b>Préconditions:</b> le visiteur doit avoir confirmer sa première visite et avoir eu une entrevue<br>
+                    <b>Préconditions:</b> le visiteur doit avoir confirmer sa première visite et avoir eu une
+                    entrevue<br>
                     <b>Scénario principal</b><br>
                     1. L’employé a eu une entrevue avec le visiteur<br>
                     2. L’employé demande au visiteur s’il souhaite planifier une seconde dose<br>
                     3. L’employé accède au calendrier à partir du système et vérifie les disponibilités.<br>
-                    4. Le visiteur effectue un  choix de date parmi celles proposées .<br>
+                    4. Le visiteur effectue un choix de date parmi celles proposées .<br>
                     5. Le système confirme la réservation et affiche le numéro unique de réservation du client.<br>
                     6. Le système envoie le numéro de réservation au visiteur.<br>
                     7. Le visiteur se rend chez le professionnel<br>
-                
-                    <b><br/>Scénario alternatif</b><br>
+
+                    <b><br />Scénario alternatif</b><br>
                     3a. Le visiteur ne souhaite pas planifier une seconde dose.<br>
-                    3a.1. Le scénario se termine.<br><br/>
+                    3a.1. Le scénario se termine.<br><br />
                     5a. Le visiteur ne trouve aucune date qui lui convient.<br>
                     5a.1. L’employé informe le visiteur qu’il n’y a aucune séance pour la période demandée<br>
-                    5a.2. Le scénario se termine.<br><br/>
+                    5a.2. Le scénario se termine.<br><br />
                 </p>
                 <p>
                     <b>CU: Produire un rapport de vaccination.</b><br>
@@ -400,33 +407,33 @@
                     <b>Préconditions:</b> Le visiteur a reçu un vaccin.<br>
                     <b>Scénario principal</b><br>
                     1. L’employé se connecte au système<br>
-                    2. L’employé rentre les informations concernant une visite<br> 
+                    2. L’employé rentre les informations concernant une visite<br>
                     3. Il clique sur produire rapport visite<br>
                     4. Le système produit le rapport de la visite.<br>
                     5. L’employé clique sur envoie rapport au visiteur.<br>
                     6. Le système envoie le rapport au visiteur par courriel.<br>
-                
-                    <b><br/>Scénario alternatif</b><br>
+
+                    <b><br />Scénario alternatif</b><br>
                     3a. Les informations rentrées sont incorrectes.<br>
                     3a.1. Le système demande à l’employé de les rentrer à nouveau<br>
-                    3a.2. Le scénario continue à l’étape 4.<br><br/>
-                </p>    
+                    3a.2. Le scénario continue à l’étape 4.<br><br />
+                </p>
                 <p>
-                    <b>CU: Notifier un visiteur.</b><br> 
-                    <b>But:</b> Un employé souhaite notifier un visiteur de son prochain rendez-vous<br> 
+                    <b>CU: Notifier un visiteur.</b><br>
+                    <b>But:</b> Un employé souhaite notifier un visiteur de son prochain rendez-vous<br>
                     <b>Acteurs: </b>Employé (principal), Visiteur (secondaire)<br>
                     <b>Préconditions:</b> Le visiteur a pris un rendez-vous .<br>
                     <b>Scénario principal</b><br>
                     1. L’employé se connecte au système<br>
-                    2. L’employé accède à la liste des rendez-vous .<br> 
+                    2. L’employé accède à la liste des rendez-vous .<br>
                     3. Il sélectionne le rendez-vous qui aura lieu dans 48h.<br>
                     5. L’employé clique sur notifier visiteur.<br>
                     6. Le système envoie une notification au visiteur par courriel.<br>
-                
-                    <b><br/>Scénario alternatif</b><br>
+
+                    <b><br />Scénario alternatif</b><br>
                     3a. Les informations rentrées sont incorrectes.<br>
                     3a.1. Le système demande à l’employé de les rentrer à nouveau<br>
-                    3a.2. Le scénario continue ) l’étape 4.<br><br/>
+                    3a.2. Le scénario continue ) l’étape 4.<br><br />
                 </p>
                 <p>
                     <b>CU: Ajouter un bénévole</b><br>
@@ -439,13 +446,13 @@
                     4. La personne donne ses informations.<br>
                     5. L‘employé vérifie l’identité de la personne.<br>
                     6. L’employé entre ses informations dans le système.<br>
-                    7. Le système valide les informations  .<br>
+                    7. Le système valide les informations .<br>
                     8. Le bénévole est crée et ajouté au système.<br>
-                
-                    <b><br/>Scénarios alternatifs</b><br>
+
+                    <b><br />Scénarios alternatifs</b><br>
                     7a. Le système rejette certaines informations mal entrées.<br>
                     7a.1. Le logiciel demande à l’employé d’entrer les données de nouveau.<br>
-                    7a.2. Le scénario reprend à l’étape 6.<br><br/>
+                    7a.2. Le scénario reprend à l’étape 6.<br><br />
                 </p>
                 <p>
                     <b>CU: Supprimer bénévole</b><br>
@@ -458,52 +465,81 @@
                     3. L’employé effectue une recherche dans le système. <br>
                     4. L’employé clique sur supprimer.<br>
                     5. Le système valide la suppression du bénévole .<br>
-                    <b><br/>Scénarios alternatifs</b><br>
+                    <b><br />Scénarios alternatifs</b><br>
                     2a. L’information entrée n’est pas correcte<br>
                     2.a.1. Le système demande d’entrer à nouveau l’information.<br>
-                    2.a.2. Le scénario se poursuit à l’étape 3 .<br><br/>
+                    2.a.2. Le scénario se poursuit à l’étape 3 .<br><br />
                 </p>
                 <p>
                     <b>CU: Modifier un bénévole</b><br>
                     <b>But</b> L’employé souhaite modifier un bénévole<br>
                     <b> Acteurs: </b>Employé (principal), Bénévole (secondaire)<br>
-                    <b>Préconditions:</b> Le bénévole fait partie de la liste des bénévoles <br> 
+                    <b>Préconditions:</b> Le bénévole fait partie de la liste des bénévoles <br>
                     <b>Scénario principal</b><br>
                     1. L’employé se connecte au système.<br>
                     2. L’employé effectue une recherche sur le bénévole concernée .<br>
                     3. L’employé clique sur Modifier .<br>
-                    4. L’employé rentre les nouvelles informations.<br> 
+                    4. L’employé rentre les nouvelles informations.<br>
                     5. Le système valide la modification.<br>
-                    <b><br/>Scénarios alternatifs</b><br>
+                    <b><br />Scénarios alternatifs</b><br>
                     4a. Les informations sont incorrectes<br>
                     4.a.1. L’employé rentre à nouveau les informations.<br>
-                    4.a.2. Le scénario se poursuit à l’étape 5 .<br><br/>
+                    4.a.2. Le scénario se poursuit à l’étape 5 .<br><br />
                 </p>
-                
+
                 </p>
             </section>
 
             <section>
                 <h2 id="analysis" class="section-title">Analyse</h2>
-                <p>Notre analyse préliminaire nous a permet de...</p>
+                <p>Notre analyse préliminaire nous a permet de relever un risque principal ainsi que plusieurs besoins
+                    non-fonctionnels.<br>
+                    en lien avec l'application du systeme que l'on souhaite mettre en place</p>
                 <div>
                     <h3>Risques</h3>
                     <ol class="risks">
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
+                        <li>
+                            <p>Fuite de données<br>
+                            <p>
+                        </li>
+                        <li>
+                            <p>1.1 vol d'identité<br>
+                            <p>
+                        </li>
+                        <li>
+                            <p> 1.2 partage d'informations confidentielles a des parties tierces<br>
+                            <p>
+                        </li>
+                        <li>
+                            <p>1.3 phising/rancon
+                            <p>
+                        </li>
                         <li></li>
                     </ol>
                 </div>
                 <div>
                     <h3>Exigences non-fonctionnelles</h3>
                     <ul class="nf-requirements">
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
+                        <p>Dans le cadre de ce projet l'application du systeme devra pouvoir manipuler, stocker des
+                            données et y accéder en continue,<br>de plus l'application devra etre relativement simple a
+                            manipuler et pouvoir fonctionner avec peu de puissance
+                        <p>
+                            <li>
+                                <p>1. Bases de données pouvant etre modifé en continue et simple (exemple firebase)
+                                <p>
+                            </li>
+                            <li><br>
+                                <p>1.1 capacité de stockage: un serveur doit etre loué/acheté
+                                <p>
+                            </li>
+                            <li><br>
+                                <p>2. Application desktop (on utilise des ordinateur sous windows)
+                                <p>
+                            </li>
+                            <li><br>
+                                <p>2.1 Language Java/c# pour construire l'application desktop
+                                <p>
+                            </li>
                     </ul>
                 </div>
             </section>
