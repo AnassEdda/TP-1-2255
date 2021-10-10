@@ -154,10 +154,10 @@
                 <li class="member">
                     <img class="member-pic" src="" alt="">
                     <div class="member-identification">
-                        <span class="member-name">Catherine DWIGHT</span>
-                        <span class="member-id">1134870</span>
+                        <span class="member-name">Rosine Rolande Simo Tegninko</span>
+                        <span class="member-id">20183729</span>
                     </div>
-                    <a href="mailto:prenom.nom@umontreal.ca">prenom.nom@umontreal.ca</a>
+                    <a href="mailto:rosine.rolande.simo.tegninko@umontreal.ca">rosine.rolande.simo.tegninko@umontreal.ca</a>
                     <span class="member-role">Chargé de...</span>
                 </li>
                 <li class="member">
@@ -201,6 +201,15 @@
             <section>
                 <h2 id="plan" class="section-title">Plannification</h2>
                 <p>Description brève du domaine et du problème</p>
+                <p>L'organisme à but non lucratif GoodPeople a entrepris une initiative permettant 
+                    à toute personne majeure de prendre rendez-vous avec lui pour se faire vacciner.<br>
+                    Actuellement, la compagnie fait face à des difficultés pour respecter les dates fixées
+                    avec le client et egalement pour le suivi. Il aimerait assurer le service à tous dans un 
+                    délai raisonnable.<br>
+                    Pour apporter une solution à ce problème, nous devons mettre en place un système qui permettra 
+                    de garantir les périodes réservées et faciliter le suivi pour toute question liée à la preuve 
+                    de vaccination ou planifier une nouvelle dose..
+                </p>
                 <p>Présentation de l'échéancier et la distribution des taches</p>
                 <p>Présentation des hypothèses</p>
             </section>
@@ -219,10 +228,12 @@
                     <dt class="glossary-term">GoodPeople</dt>
                     <dd class="glossary-def">Organisme à but non lucratif qui a entrepris lìnitiative VaxTodo</dd>
                     <dt class="glossary-term">Bénévole</dt>
-                    <dd class="glossary-def">Personnnes responsables d'accueillir les visiteurs et de les acheminer aux
+                    <dd class="glossary-def">Personnne responsable d'accueillir les visiteurs et de les acheminer aux
                         employés</dd>
+                    <dt class="glossary-term">Visiteur</dt>
+                    <dd class="glossary-def">Personnne majeur qui souhaite se faire vacciner </dd>
                     <dt class="glossary-term">Employé</dt>
-                    <dd class="glossary-def">Personnes responsables de faire le traitement le traitement du dossier et
+                    <dd class="glossary-def">Personne responsable de faire le traitement le traitement du dossier et
                         le choix du vaccin avec les visiteurs</dd>
                     <dt class="glossary-term">Visite planifiée</dt>
                     <dd class="glossary-def">Visite avec un visiteur qui a un rendez-vous</dd>
@@ -234,14 +245,22 @@
                     <dt class="glossary-term">Plage horaire</dt>
                     <dd class="glossary-def">Période d'une heure dans laquelle les visiteurs réservent leurs
                         rendez-vous. Il peut y avoir un maximum de 15 rendez-vous par plage horaire</dd>
+                    <dt class="glossary-term">première dose</dt>
+                    <dd class="glossary-def">Vaccin reçu pour la première fois</dd>
+                    <dt class="glossary-term">seconde dose</dt>
+                    <dd class="glossary-def">Vaccin reçu pour la deuxième fois</dd>
+                    <dt class="glossary-term">Numéro du compte visiteur</dt>
+                    <dd class="glossary-def">Nombre à 12 chiffres qui identifie chaque visiteur </dd>
+                    <dt class="glossary-term">Informations personnelles</dt>
+                    <dd class="glossary-def">Informations fournies par les visiteurs lors de la visite à GoodPeople  </dd>
                 </dl>
             </section>
 
             <section>
                 <h2 id="model" class="section-title">Modélisation du domaine</h2>
                 <p>Cas d'utilisation</p>
-                <a href="CU.vpp">
-                    <img src="CU.PNG" alt="">
+                <a href="VaxTodo.vpp">
+                    <img src="VaxTodo.jpg" alt="" width="800px">
                 </a>
 
                 <p>Scénarios
@@ -427,8 +446,8 @@
                     1. L’employé se connecte au système<br>
                     2. L’employé accède à la liste des rendez-vous .<br>
                     3. Il sélectionne le rendez-vous qui aura lieu dans 48h.<br>
-                    5. L’employé clique sur notifier visiteur.<br>
-                    6. Le système envoie une notification au visiteur par courriel.<br>
+                    4. L’employé clique sur notifier visiteur.<br>
+                    5. Le système envoie une notification au visiteur par courriel.<br>
 
                     <b><br />Scénario alternatif</b><br>
                     3a. Les informations rentrées sont incorrectes.<br>
@@ -492,7 +511,7 @@
 
             <section>
                 <h2 id="analysis" class="section-title">Analyse</h2>
-                <p>Notre analyse préliminaire nous a permet de relever un risque principal ainsi que plusieurs besoins
+                <p>Notre analyse préliminaire nous a permis de relever un risque principal ainsi que plusieurs besoins
                     non-fonctionnels.<br>
                     en lien avec l'application du systeme que l'on souhaite mettre en place</p>
                 <div>
@@ -503,15 +522,15 @@
                             <p>
                         </li>
                         <li>
-                            <p> vol d'identité<br>
+                            <p> Vol d'identité<br>
                             <p>
                         </li>
                         <li>
-                            <p> partage d'informations confidentielles a des parties tierces<br>
+                            <p> Partage d'informations confidentielles à des parties tierces<br>
                             <p>
                         </li>
                         <li>
-                            <p>phising/rancon
+                            <p>phising/rançon
                             <p>
                         </li>
 
@@ -520,12 +539,13 @@
                 <div>
                     <h3>Exigences non-fonctionnelles</h3>
                     <ul class="nf-requirements">
-                        <p>Dans le cadre de ce projet l'application du systeme devra pouvoir manipuler, stocker des
-                            données et y accéder en continue,de plus l'application devra etre relativement simple a
+                        <p>Dans le cadre de ce projet l'application du systeme devra pouvoir:
+                             manipuler, stocker des
+                            données et y accéder en continue,de plus l'application devra être relativement simple à
                             manipuler et pouvoir fonctionner avec peu de puissance
                         <p>
                             <li>
-                                <p> Bases de données pouvant etre modifé en continue et simple (exemple firebase)
+                                <p> Bases de données pouvant être modifé en continue et simple (exemple firebase)
                                 <p>
                             </li>
                             <li>
@@ -533,7 +553,7 @@
                                 <p>
                             </li>
                             <li>
-                                <p> Application desktop (on utilise des ordinateur sous windows)
+                                <p> Application desktop (on utilise des ordinateurs sous windows)
                                 <p>
                             </li>
                             <li>
