@@ -132,10 +132,14 @@
         <div class="title-section">
             <h1 class="report-title">Rapport du livrable 1</h1>
             <p class="report-summary">
-                Ce livrable se concentre sur...
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia distinctio tempora quam nulla quod enim.
-                Odit eius dolores repellendus incidunt doloribus delectus at ex sunt error, iste dicta, maiores
-                blanditiis.
+                Ce livrable présente une solution a la situation de l'organisation GoodPeople en soumettant un systeme
+                logiciel pour la gestion et prise de ses rendez-vous. Une solution optimale a été imaginé pour toutes
+                les situations possibles
+                que l'organisme pourrait rencontrer. Ces solutions sont présentées par les multiples cas d'utilisations
+                et leur scénarios alternatifs.
+                Ce livrable souligne aussi besoins non-fonctionnel que requiert le systeme a developper ainsi que les
+                risques potentiels auquel il fait face.
+
             </p>
         </div>
 
@@ -143,31 +147,31 @@
             <h2 class="team-title">Notre équipe</h2>
             <ul class="bare-list members">
                 <li class="member">
-                    <img class="member-pic" src="" alt="">
+
                     <div class="member-identification">
                         <span class="member-name">Frédéric Achard-Groleau</span>
                         <span class="member-id">20165049</span>
                     </div>
                     <a href="mailto:frederic.achard-groleau@umontreal.ca">frederic.achard-groleau@umontreal.ca</a>
-                    <span class="member-role">Chargé de...</span>
+                    <span class="member-role">Chargé de projet et Plannification</span>
                 </li>
                 <li class="member">
-                    <img class="member-pic" src="" alt="">
+
                     <div class="member-identification">
                         <span class="member-name">Rosine Rolande Simo Tegninko</span>
-                        <span class="member-id">20183729</span>
+                        <span class="member-id">1134870</span>
                     </div>
                     <a href="mailto:rosine.rolande.simo.tegninko@umontreal.ca">rosine.rolande.simo.tegninko@umontreal.ca</a>
-                    <span class="member-role">Chargé de...</span>
+                    <span class="member-role">Chargé de developpement et Plannification</span>
                 </li>
                 <li class="member">
-                    <img class="member-pic" src="" alt="">
+
                     <div class="member-identification">
-                        <span class="member-name">Yan AI</span>
-                        <span class="member-id">1246973</span>
+                        <span class="member-name">Anass Eddaoudi</span>
+                        <span class="member-id">20173147</span>
                     </div>
-                    <a href="mailto:prenom.nom@umontreal.ca">prenom.nom@umontreal.ca</a>
-                    <span class="member-role">Chargé de...</span>
+                    <a href="mailto:anass.eddaoudi@umontreal.ca">anass.eddaoudi@umontreal.ca</a>
+                    <span class="member-role">Chargé de devloppement</span>
                 </li>
             </ul>
         </div>
@@ -200,18 +204,12 @@
         <div class="report-main">
             <section>
                 <h2 id="plan" class="section-title">Plannification</h2>
-                <p>Description brève du domaine et du problème</p>
-                <p>L'organisme à but non lucratif GoodPeople a entrepris une initiative permettant 
-                    à toute personne majeure de prendre rendez-vous avec lui pour se faire vacciner.<br>
-                    Actuellement, la compagnie fait face à des difficultés pour respecter les dates fixées
-                    avec le client et egalement pour le suivi. Il aimerait assurer le service à tous dans un 
-                    délai raisonnable.<br>
-                    Pour apporter une solution à ce problème, nous devons mettre en place un système qui permettra 
-                    de garantir les périodes réservées et faciliter le suivi pour toute question liée à la preuve 
-                    de vaccination ou planifier une nouvelle dose..
+                <p>Notre équipe doit développer le système VaxTodo:re qui rendra les activités de l'initiative déjà existante VaxTodo plus 
+                    efficaces et sécure en automatisant plusieurs des étapes déjà existantes.
                 </p>
-                <p>Présentation de l'échéancier et la distribution des taches</p>
-                <p>Présentation des hypothèses</p>
+                <p>Rosine Rolande Simo Tegninko s'occupera des CU et des scénarios, Frédéric Achard-Groleau fera le diagramme de CU
+                    et le glossaire et Anass Eddaoudi s'occupera de l'analyse et du prototype.
+                </p>
             </section>
 
             <section>
@@ -226,21 +224,25 @@
                     <dt class="glossary-term">VaxTodo</dt>
                     <dd class="glossary-def">Initiative qui permet à toute personne majeure de se faire vacciner</dd>
                     <dt class="glossary-term">GoodPeople</dt>
-                    <dd class="glossary-def">Organisme à but non lucratif qui a entrepris lìnitiative VaxTodo</dd>
+                    <dd class="glossary-def">Organisme à but non lucratif qui a entrepris l'initiative VaxTodo</dd>
                     <dt class="glossary-term">Bénévole</dt>
                     <dd class="glossary-def">Personnne responsable d'accueillir les visiteurs et de les acheminer aux
                         employés</dd>
                     <dt class="glossary-term">Visiteur</dt>
                     <dd class="glossary-def">Personnne majeur qui souhaite se faire vacciner </dd>
                     <dt class="glossary-term">Employé</dt>
-                    <dd class="glossary-def">Personne responsable de faire le traitement le traitement du dossier et
+                    <dd class="glossary-def">Personne responsable de faire le traitement du dossier et
                         le choix du vaccin avec les visiteurs</dd>
+                    <dt class="glossary-term">Visiteur</dt>
+                    <dd class="glossary-def">Personne qui visite VaxTodo souhaitant se faire vacciner</dd>
+                    <dt class="glossary-term">Professionnel</dt>
+                    <dd class="glossary-def">Personne qui administre les vaccins et qui s'occupe de la santé des patients</dd>
                     <dt class="glossary-term">Visite planifiée</dt>
                     <dd class="glossary-def">Visite avec un visiteur qui a un rendez-vous</dd>
                     <dt class="glossary-term">Visite spontanée</dt>
                     <dd class="glossary-def">Visite avec un visiteur qui n'a pas de rendez-vous</dd>
                     <dt class="glossary-term">Questionnaire</dt>
-                    <dd class="glossary-def">Formulaire qui prend les ìnformations personnelles et les informations
+                    <dd class="glossary-def">Formulaire qui prend les informations personnelles et les informations
                         concernant la COVID19 d'un visiteur</dd>
                     <dt class="glossary-term">Plage horaire</dt>
                     <dd class="glossary-def">Période d'une heure dans laquelle les visiteurs réservent leurs
@@ -259,8 +261,13 @@
             <section>
                 <h2 id="model" class="section-title">Modélisation du domaine</h2>
                 <p>Cas d'utilisation</p>
-                <a href="VaxTodo.vpp">
-                    <img src="VaxTodo.jpg" alt="" width="800px">
+                <a href="CU.vpp">
+                    <img src="VaxTodo.jpg" alt="">
+                </a>
+
+                <p>Diagramme d'activité principal</p>
+                <a href="DAPrincipal.vpp">
+                    <img src="DAPrincipal.PNG" alt="">
                 </a>
 
                 <p>Scénarios
@@ -301,14 +308,17 @@
                     4. L’employé effectue une recherche dans le système<br>
                     5. L’employé clique sur "Annuler le rendez-vous" <br>
                     6. Le système valide l’annulation.<br>
-                    7. Le système confirme la réservation et affiche le numéro unique de réservation du client.<br>
-                    8. Le système envoie par courriel un message d’annulation au visiteur.<br>
+                    7. Le système envoie par courriel un message d’annulation au visiteur.<br>
 
                     <b><br />Sénarios alternatifs</b><br>
                     4a. Le visiteur n’a pas le numéro de réservation.<br>
                     4a.1. L’employé lui demande son nom et sa date de rendez-vous <br>
                     4a.2. Le scénario continue à l’étape 5.<br><br />
                 </p>
+
+                <a href="DAGestionRV.vpp">
+                    <img src="DAGestionRV.PNG" alt="">
+                </a>
 
                 <p><b>CU:Confirmer une visite </b> <br>
                     <b>But:</b> L’employé souhaite confirmer une visite <br>
@@ -328,6 +338,10 @@
                     2a.1. Le bénévole dirige le visiteur vers une file d’attente de visites spontanées .<br>
                     2a.2. Le scénario reprend à l’étape 4.<br /><br />
                 </p>
+
+                <a href="DAConfirmerRV.vpp">
+                    <img src="DAConfirmerRV.PNG" alt="">
+                </a>
 
                 <p> <b>CU: Créer un compte visiteur</b><br>
                     <b>But:</b> Un visiteur souhaite prendre une première dose<br>
@@ -381,6 +395,11 @@
                     4.a.1. L’employé rentre à nouveau les informations.<br>
                     4.a.2. Le scénario se poursuit à l’étape 5.<br><br />
                 </p>
+
+                <a href="DAGestionVis.vpp">
+                    <img src="DAGestionVis.PNG" alt="">
+                </a>
+
                 <p>
                     <b>CU: Mettre en place une entrevue </b><br>
                     <b>But:</b> Un employé désire avoir une entrevue avec un visiteur<br>
@@ -397,6 +416,11 @@
                     2a.1. La visite est annulée.<br>
                     2a.2. Le scénario se termine.<br><br />
                 </p>
+
+                <a href="DAEntrevue.vpp">
+                    <img src="DAEntrevue.PNG" alt="">
+                </a>
+
                 <p>
                     <b>CU:Planifier une seconde dose </b><br>
                     <b>But: </b>Un visiteur souhaite planifier une seconde dose<br>
@@ -419,6 +443,11 @@
                     5a.1. L’employé informe le visiteur qu’il n’y a aucune séance pour la période demandée<br>
                     5a.2. Le scénario se termine.<br><br />
                 </p>
+
+                <a href="DADose2.vpp">
+                    <img src="DADose2.PNG" alt="">
+                </a>
+
                 <p>
                     <b>CU: Produire un rapport de vaccination.</b><br>
                     <b>But:</b> Un employé souhaite produire un rapport de vaccination<br>
@@ -437,6 +466,11 @@
                     3a.1. Le système demande à l’employé de les rentrer à nouveau<br>
                     3a.2. Le scénario continue à l’étape 4.<br><br />
                 </p>
+
+                <a href="DARapport.vpp">
+                    <img src="DARapport.PNG" alt="">
+                </a>
+
                 <p>
                     <b>CU: Notifier un visiteur.</b><br>
                     <b>But:</b> Un employé souhaite notifier un visiteur de son prochain rendez-vous<br>
@@ -506,6 +540,10 @@
                     4.a.2. Le scénario se poursuit à l’étape 5 .<br><br />
                 </p>
 
+                <a href="DAGestionBen.vpp">
+                    <img src="DAGestionBen.PNG" alt="">
+                </a>
+
                 </p>
             </section>
 
@@ -518,7 +556,7 @@
                     <h3>Risques</h3>
                     <ol class="risks">
                         <li>
-                            <p>Fuite de données<br>
+                            <p> Fuite de données<br>
                             <p>
                         </li>
                         <li>
@@ -526,11 +564,11 @@
                             <p>
                         </li>
                         <li>
-                            <p> Partage d'informations confidentielles à des parties tierces<br>
+                            <p> Partage d'informations confidentielles a des parties tierces<br>
                             <p>
                         </li>
                         <li>
-                            <p>phising/rançon
+                            <p> Hameçonnage/rançon
                             <p>
                         </li>
 
@@ -545,11 +583,11 @@
                             manipuler et pouvoir fonctionner avec peu de puissance
                         <p>
                             <li>
-                                <p> Bases de données pouvant être modifé en continue et simple (exemple firebase)
+                                <p> Bases de données pouvant être modifiées en continue et simple (exemple firebase)
                                 <p>
                             </li>
                             <li>
-                                <p> capacité de stockage: un serveur doit etre loué/acheté
+                                <p> Capacité de stockage: un serveur doit etre loué/acheté
                                 <p>
                             </li>
                             <li>
@@ -557,7 +595,11 @@
                                 <p>
                             </li>
                             <li>
-                                <p> Language Java/c# pour construire l'application desktop
+                                <p> Language Java/C# pour construire l'application desktop
+                                <p>
+                            </li>
+                            <li>
+                                <p> Le système doit être capable de valider les données et de s'assurer que tous les numéros de compte sont uniques
                                 <p>
                             </li>
                     </ul>
@@ -568,29 +610,45 @@
                 <h2 id="prototype" class="section-title">Prototype</h2>
                 <ul class="bare-list previews">
                     <li class="preview">
-                        <img class="preview-img" src="url-du-prototype" alt="">
-                        Description du prototype.
+                        <img class="preview-img" src="menu.png" alt="">
+                        menu
                     </li>
                     <li class="preview">
-                        <img class="preview-img" src="url-du-prototype" alt="">
-                        Description du prototype.
+                        <img class="preview-img" src="compte corriger.png" alt="">
+                        page de création de compte
                     </li>
                     <li class="preview">
-                        <img class="preview-img" src="url-du-prototype" alt="">
-                        Description du prototype.
+                        <img class="preview-img" src="recherche.png" alt="">
+                        page de rechercher (base de données)
                     </li>
+                    <li class="preview">
+                        <img class="preview-img" src="Calendrier.png" alt="">
+                        Calendrier pour verifier les disponibilitées + prendre un rdv
+                    </li>
+                    <li class="preview">
+                        <img class="preview-img" src="compte corriger.png" alt="">
+                        Modifier/supprimer/notifier un utilisateur
+                    </li>
+                    <li class="preview">
+                        <img class="preview-img" src="preuve_vaccinal.png" alt="">
+                        preuve vaccinale
+                    </li>
+                    <li class="preview">
+                        <img class="preview-img" src="overview.png" alt="">
+                        <p>Ici nous pouvons voir la vue globale de la navigation du prototype
+                        <p>
+                    </li>
+
+
+
 
                 </ul>
             </section>
         </div>
     </main>
     <footer class="report-footer">
-        <p>
-            <a class="link report-footer__link" href="bitbucket.com"> Lien vers compte Bitbucket</a>
-        </p>
-        <p>
-            <a class="link report-footer__link" href="fichier-dm1.vpp">Lien vers ressource externe (fichiers VPP)</a>
-        </p>
+
+        <a class="link report-footer__link" href="https://github.com/AnassEdda/TP-1-2255"> Lien vers compte Github</a>
     </footer>
 
 
