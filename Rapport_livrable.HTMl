@@ -251,13 +251,13 @@
             <section>
                 <h2 id="model" class="section-title">Modélisation du domaine</h2>
                 <p>Cas d'utilisation</p>
-                <a href="CU.vpp">
-                    <img src="VaxTodo.jpg" alt="">
+                <a href="VPP\CU.vpp">
+                    <img src="images\VaxTodo.jpg" alt="">
                 </a>
 
                 <p>Diagramme d'activité principal</p>
-                <a href="DAPrincipal.vpp">
-                    <img src="DAPrincipal.PNG" alt="">
+                <a href="VPP\DAPrincipal.vpp">
+                    <img src="images\DAPrincipal.PNG" alt="">
                 </a>
 
                 <p>Scénarios
@@ -306,8 +306,8 @@
                     4a.2. Le scénario continue à l’étape 5.<br><br />
                 </p>
 
-                <a href="DAGestionRV.vpp">
-                    <img src="DAGestionRV.PNG" alt="">
+                <a href="VPP\DAGestionRV.vpp">
+                    <img src="images\DAGestionRV.PNG" alt="">
                 </a>
 
                 <p><b>CU:Confirmer une visite </b> <br>
@@ -329,8 +329,8 @@
                     2a.2. Le scénario reprend à l’étape 4.<br /><br />
                 </p>
 
-                <a href="DAConfirmerRV.vpp">
-                    <img src="DAConfirmerRV.PNG" alt="">
+                <a href="VPP\DAConfirmerRV.vpp">
+                    <img src="images\DAConfirmerRV.PNG" alt="">
                 </a>
 
                 <p> <b>CU: Créer un compte visiteur</b><br>
@@ -386,8 +386,8 @@
                     4.a.2. Le scénario se poursuit à l’étape 5.<br><br />
                 </p>
 
-                <a href="DAGestionVis.vpp">
-                    <img src="DAGestionVis.PNG" alt="">
+                <a href="VPP\DAGestionVis.vpp">
+                    <img src="images\DAGestionVis.PNG" alt="">
                 </a>
 
                 <p>
@@ -407,8 +407,8 @@
                     2a.2. Le scénario se termine.<br><br />
                 </p>
 
-                <a href="DAEntrevue.vpp">
-                    <img src="DAEntrevue.PNG" alt="">
+                <a href="VPP\DAEntrevue.vpp">
+                    <img src="images\DAEntrevue.PNG" alt="">
                 </a>
 
                 <p>
@@ -434,8 +434,8 @@
                     5a.2. Le scénario se termine.<br><br />
                 </p>
 
-                <a href="DADose2.vpp">
-                    <img src="DADose2.PNG" alt="">
+                <a href="VPP\DADose2.vpp">
+                    <img src="images\DADose2.PNG" alt="">
                 </a>
 
                 <p>
@@ -457,8 +457,8 @@
                     3a.2. Le scénario continue à l’étape 4.<br><br />
                 </p>
 
-                <a href="DARapport.vpp">
-                    <img src="DARapport.PNG" alt="">
+                <a href="VPP\DARapport.vpp">
+                    <img src="images\DARapport.PNG" alt="">
                 </a>
 
                 <p>
@@ -530,8 +530,8 @@
                     4.a.2. Le scénario se poursuit à l’étape 5 .<br><br />
                 </p>
 
-                <a href="DAGestionBen.vpp">
-                    <img src="DAGestionBen.PNG" alt="">
+                <a href="VPP\DAGestionBen.vpp">
+                    <img src="images\DAGestionBen.PNG" alt="">
                 </a>
 
                 </p>
@@ -593,37 +593,63 @@
                             </li>
                     </ul>
                 </div>
+                <div>
+                    <h3>Matériel</h3>
+                    <p>Pour informatiser le système on aura besoin d’une base de données déployée sur un serveur physique ou un ordinateur Windows allumé pendant les heures d’ouvertures du centre: </p>
+                    <p>Une estimation des exigences matérielles tien comme suit : </p>   
+                    <li>Une connexion internet ou LAN (internet 10Mpgs montant et descendant) </li>
+                        <li>Sauvegarde sur un serveur/ordi backup (environ 10Gig) </li>
+                        <li>Les ordinateur Windows doivent tourner sur une puce i3 intel ou comparable puisque certaines requêtes tournent sur le client</li>
+                        <li>Les fichiers ne contiennent que des textes et des adresses donc ne nécessitent pas énormément d’espaces (700ko) </li>
+                    <ul>
+                </div>
+
+                <div>
+                    <h3>Solution de stockage</h3>
+                    <p>Les fichiers dans la base de données peuvent être sous format Excel et exporté en table simplement grâce à une API oracle ou a un logiciel DataBase sans SQL. </p>
+                    <p>On peut aussi avoir une version Excel sur les ordinateurs qui servent de serveurs pour des modifications manuels ou pour les exportés simplement. </p>   
+                </div>
+
+                <div>
+                    <h3>Exigences conceptuelles</h3>
+                    <p>Les entrées d’informations (créations de compte et prises de RDV) sont prises comme input et intégrer dans le système dans une tables de données extensibles codé sur le backend comme un ArrayList. </p>
+                    <p>Les Interfaces sont faites en C# ou python pour créer une AppDesktop simplement. </p>   
+                </div>
+                <p>Cette configuration est complète du système serveur dont les exigences sont faciles à déterminer, au client représenté par le prototype visuel présenté. </p>
+                    
+
+                
             </section>
 
             <section>
                 <h2 id="prototype" class="section-title">Prototype</h2>
                 <ul class="bare-list previews">
                     <li class="preview">
-                        <img class="preview-img" src="menu.png" alt="">
+                        <img class="preview-img" src="images\menu.png" alt="">
                         menu
                     </li>
                     <li class="preview">
-                        <img class="preview-img" src="compte corriger.png" alt="">
+                        <img class="preview-img" src="images\compte corriger.png" alt="">
                         page de création de compte
                     </li>
                     <li class="preview">
-                        <img class="preview-img" src="recherche.png" alt="">
+                        <img class="preview-img" src="images\recherche.png" alt="">
                         page de rechercher (base de données)
                     </li>
                     <li class="preview">
-                        <img class="preview-img" src="Calendrier.png" alt="">
+                        <img class="preview-img" src="images\Calendrier.png" alt="">
                         Calendrier pour verifier les disponibilitées + prendre un rdv
                     </li>
                     <li class="preview">
-                        <img class="preview-img" src="compte corriger.png" alt="">
+                        <img class="preview-img" src="images\compte corriger.png" alt="">
                         Modifier/supprimer/notifier un utilisateur
                     </li>
                     <li class="preview">
-                        <img class="preview-img" src="preuve_vaccinal.png" alt="">
+                        <img class="preview-img" src="images\preuve_vaccinal.png" alt="">
                         preuve vaccinale
                     </li>
                     <li class="preview">
-                        <img class="preview-img" src="overview.png" alt="">
+                        <img class="preview-img" src="images\overview.png" alt="">
                         <p>Ici nous pouvons voir la vue globale de la navigation du prototype
                         <p>
                     </li>
