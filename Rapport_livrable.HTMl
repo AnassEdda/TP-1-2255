@@ -161,7 +161,8 @@
                         <span class="member-name">Rosine Rolande Simo Tegninko</span>
                         <span class="member-id">1134870</span>
                     </div>
-                    <a href="mailto:rosine.rolande.simo.tegninko@umontreal.ca">rosine.rolande.simo.tegninko@umontreal.ca</a>
+                    <a
+                        href="mailto:rosine.rolande.simo.tegninko@umontreal.ca">rosine.rolande.simo.tegninko@umontreal.ca</a>
                     <span class="member-role">Chargé de developpement et Plannification</span>
                 </li>
                 <li class="member">
@@ -204,10 +205,12 @@
         <div class="report-main">
             <section>
                 <h2 id="plan" class="section-title">Plannification</h2>
-                <p>Notre équipe doit développer le système VaxTodo:re qui rendra les activités de l'initiative déjà existante VaxTodo plus 
+                <p>Notre équipe doit développer le système VaxTodo:re qui rendra les activités de l'initiative déjà
+                    existante VaxTodo plus
                     efficaces et sécure en automatisant plusieurs des étapes déjà existantes.
                 </p>
-                <p>Rosine Rolande Simo Tegninko s'occupera des CU et des scénarios, Frédéric Achard-Groleau fera le diagramme de CU
+                <p>Rosine Rolande Simo Tegninko s'occupera des CU et des scénarios, Frédéric Achard-Groleau fera le
+                    diagramme de CU
                     et le glossaire et Anass Eddaoudi s'occupera de l'analyse et du prototype.
                 </p>
             </section>
@@ -234,7 +237,8 @@
                     <dt class="glossary-term">Visiteur</dt>
                     <dd class="glossary-def">Personne qui visite VaxTodo souhaitant se faire vacciner</dd>
                     <dt class="glossary-term">Professionnel</dt>
-                    <dd class="glossary-def">Personne qui administre les vaccins et qui s'occupe de la santé des patients</dd>
+                    <dd class="glossary-def">Personne qui administre les vaccins et qui s'occupe de la santé des
+                        patients</dd>
                     <dt class="glossary-term">Visite planifiée</dt>
                     <dd class="glossary-def">Visite avec un visiteur qui a un rendez-vous</dd>
                     <dt class="glossary-term">Visite spontanée</dt>
@@ -543,7 +547,7 @@
                 <a href="VPP\DAGestionBen.vpp">
                     <img src="images\DAGestionBen.PNG" alt="">
                 </a>
-                
+
             </section>
 
             <section>
@@ -568,9 +572,32 @@
 
             <section>
                 <h2 id="analysis" class="section-title">Analyse</h2>
-                <p>Notre analyse préliminaire nous a permet de relever les risques ainsi que plusieurs besoins
-                    non-fonctionnels.<br>
-                    en lien avec l'application du systeme que l'on souhaite mettre en place</p>
+                <p>Analyse
+
+                    Pour informatiser le systèmes on aura besoin d’une base de données déployer sur un serveur physique
+                    ou un ordinateur widows allumer durant les heures d’ouvertures du centre:
+                    Une estimation des exigences matérielles tien comme suit:<br>
+
+                <p>une connexion internet ou LAN (internet 10Mpgs montant et descendant)<br>
+                <p>-Sauvegarde sur un serveur/ordi backup (environ 10Gig)<br>
+                <p>-les ordinateur windows doivent tourner sur une puce i3 intel ou comparable
+                    puisque certaines requêtes tournent sur le client<br>
+                <p>-les fichiers ne contiennent que des textes et des adresses donc ne nécessitent <br> pas énormément
+                    d’espaces (700ko)
+
+                    Les fichiers dans la bases de données peuvent être sous format excel et exporté en table simplement
+                    grace a une API oracle ou a un logiciel DataBase sans Sql.
+                    On peut aussi avoir une version excel sur les ordinateur qui servent de serveurs pour des
+                    modifications manuels ou pour les exportés simplement.<br>
+
+                    Les entrées d’informations (créations de compte et prises de RDV) sont prises comme input et
+                    intégrer dans le système dans une tables de données extensibles codé sur le backend comme un
+                    ArrayList.<br>
+
+                    Les Interfaces sont faites en C# ou python pour créer une AppDesktop simplement.<br>
+
+                    Cette configuration est complete du système serveur dont les exigences sont facile a determiner, au
+                    client représenté par le prototype visuel présenté.</p><br>
                 <div>
                     <h3>Risques</h3>
                     <ol class="risks">
@@ -617,37 +644,46 @@
                                 <p>
                             </li>
                             <li>
-                                <p> Le système doit être capable de valider les données et de s'assurer que tous les numéros de compte sont uniques
+                                <p> Le système doit être capable de valider les données et de s'assurer que tous les
+                                    numéros de compte sont uniques
                                 <p>
                             </li>
                     </ul>
                 </div>
                 <div>
                     <h3>Matériel</h3>
-                    <p>Pour informatiser le système on aura besoin d’une base de données déployée sur un serveur physique ou un ordinateur Windows allumé pendant les heures d’ouvertures du centre: </p>
-                    <p>Une estimation des exigences matérielles tien comme suit : </p>   
+                    <p>Pour informatiser le système on aura besoin d’une base de données déployée sur un serveur
+                        physique ou un ordinateur Windows allumé pendant les heures d’ouvertures du centre: </p>
+                    <p>Une estimation des exigences matérielles tien comme suit : </p>
                     <li>Une connexion internet ou LAN (internet 10Mpgs montant et descendant) </li>
-                        <li>Sauvegarde sur un serveur/ordi backup (environ 10Gig) </li>
-                        <li>Les ordinateur Windows doivent tourner sur une puce i3 intel ou comparable puisque certaines requêtes tournent sur le client</li>
-                        <li>Les fichiers ne contiennent que des textes et des adresses donc ne nécessitent pas énormément d’espaces (700ko) </li>
+                    <li>Sauvegarde sur un serveur/ordi backup (environ 10Gig) </li>
+                    <li>Les ordinateur Windows doivent tourner sur une puce i3 intel ou comparable puisque certaines
+                        requêtes tournent sur le client</li>
+                    <li>Les fichiers ne contiennent que des textes et des adresses donc ne nécessitent pas énormément
+                        d’espaces (700ko) </li>
                     <ul>
                 </div>
 
                 <div>
                     <h3>Solution de stockage</h3>
-                    <p>Les fichiers dans la base de données peuvent être sous format Excel et exporté en table simplement grâce à une API oracle ou a un logiciel DataBase sans SQL. </p>
-                    <p>On peut aussi avoir une version Excel sur les ordinateurs qui servent de serveurs pour des modifications manuels ou pour les exportés simplement. </p>   
+                    <p>Les fichiers dans la base de données peuvent être sous format Excel et exporté en table
+                        simplement grâce à une API oracle ou a un logiciel DataBase sans SQL. </p>
+                    <p>On peut aussi avoir une version Excel sur les ordinateurs qui servent de serveurs pour des
+                        modifications manuels ou pour les exportés simplement. </p>
                 </div>
 
                 <div>
                     <h3>Exigences conceptuelles</h3>
-                    <p>Les entrées d’informations (créations de compte et prises de RDV) sont prises comme input et intégrer dans le système dans une tables de données extensibles codé sur le backend comme un ArrayList. </p>
-                    <p>Les Interfaces sont faites en C# ou python pour créer une AppDesktop simplement. </p>   
+                    <p>Les entrées d’informations (créations de compte et prises de RDV) sont prises comme input et
+                        intégrer dans le système dans une tables de données extensibles codé sur le backend comme un
+                        ArrayList. </p>
+                    <p>Les Interfaces sont faites en C# ou python pour créer une AppDesktop simplement. </p>
                 </div>
-                <p>Cette configuration est complète du système serveur dont les exigences sont faciles à déterminer, au client représenté par le prototype visuel présenté. </p>
-                    
+                <p>Cette configuration est complète du système serveur dont les exigences sont faciles à déterminer, au
+                    client représenté par le prototype visuel présenté. </p>
 
-                
+
+
             </section>
 
             <section>
