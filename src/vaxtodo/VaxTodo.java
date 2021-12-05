@@ -2,7 +2,7 @@ package vaxtodo;
 
 public class VaxTodo {
 
-	public void main() {
+	public static void main(String args[]) {
 		// TODO - implement VaxTodo.main
 	}
 }
