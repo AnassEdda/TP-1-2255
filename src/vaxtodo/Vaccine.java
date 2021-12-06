@@ -2,6 +2,8 @@ package vaxtodo;
 
 public class Vaccine {
 
+	public static final int VACCINE_MAX_NUMBER = 2;
+	
 	private String date;
 	private int doseNumber;
 	private String code;

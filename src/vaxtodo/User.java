@@ -1,8 +1,10 @@
 package vaxtodo;
 
+import java.util.*;
+
 public class User {
 
-	private String username;
+	private int userCode;
 	private String password;
 	private int accountNumber;
 	private String lastName;
@@ -12,34 +14,90 @@ public class User {
 	private WorkingDay[] schedule;
 	private boolean isEmployee;
 
-	public User(String username, String password, String lastName, String firstName, Address address, int phoneNumber, boolean isEmployee) {
-		this.username = username;
+	public User(String password, String lastName, String firstName, Address address, int phoneNumber, String isEmployee) {
+		this.userCode = generateUserCode();
 		this.password = password;
 		this.lastName = lastName;
 		this.firstName = firstName;
 		this.address = address;
 		this.phoneNumber = phoneNumber;
-		this.isEmployee = isEmployee;
+
+		if(isEmployee.equals("OUI")) {
+			this.isEmployee = true;
+		}else {
+			this.isEmployee = false;
+		}
+		
 		this.schedule = null;
 		this.accountNumber = generateAccountNumber();
 	}
 	
-	public boolean isValid() {
-		// TODO - implement User.isValid
-		return false;
+	public boolean isValid(String[] infos) {
+		boolean isValid = true;
+		
+		//TODO password check (infos[0])
+		
+		if(!infos[1].matches("[a-zA-Z]+")) {
+			System.out.println("Nom de famille invalide");
+			isValid = false;
+		}
+		
+		if(!infos[2].matches("[a-zA-Z]+")) {
+			System.out.println("Prenom invalide");
+			isValid = false;
+		}
+		
+		try {
+			Integer.parseInt(infos[3]);
+		} catch(NumberFormatException e) {
+			System.out.println("Numero de telephone invalide");
+			isValid = false;
+		}
+		if(infos[3].length() != 10) {
+			System.out.println("Numero de telephone invalide");
+			isValid = false;
+		}
+		
+		if(!infos[4].equals("NON") || !infos[4].equals("OUI")) {
+			System.out.println("Entrer OUI ou NON lors de la demande de si l'utilisateur est un employe");
+			isValid = false;
+		}
+		
+		return isValid;
 	}
 	
 	public int generateAccountNumber() {
-		// TODO - implement User.generateAccountNumber
-		return 0;
+		int number = 0;
+		Random rand = new Random();
+		
+		for(int i = 0; i < 12; ++i) {
+			number += rand.nextInt() * Math.pow(10, i);
+		}
+		
+		//TODO verifier que number est unique
+		
+		return number;
 	}
 	
-	public String getUsername() {
-		return username;
+	public int generateUserCode() {
+		int code = 0;
+		Random rand = new Random();
+		
+		for(int i = 0; i < 9; ++i) {
+			code += rand.nextInt() * Math.pow(10, i);
+		}
+		
+		//TODO verifier que code est unique
+		
+		return code;
+	}
+	
+	public int getUserCode() {
+		return userCode;
 	}
 
-	public void setUsername(String username) {
-		this.username = username;
+	public void setUserCode(int userCode) {
+		this.userCode = userCode;
 	}
 
 	public String getPassword() {

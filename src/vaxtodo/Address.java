@@ -2,27 +2,41 @@ package vaxtodo;
 
 public class Address {
 
-	private String stNumber;
+	private int stNumber;
 	private String stName;
-	private String postalCode;
-	private Province province;
-	private String country;
-	private String city;
 	
-	public Address(String stNumber, String stName, String postalCode, Province province, String country, String city) {
+	public Address(int stNumber, String stName) {
 		this.stNumber = stNumber;
 		this.stName = stName;
-		this.postalCode = postalCode;
-		this.province = province;
-		this.country = country;
-		this.city = city;
 	}
 	
-	public String getStNumber() {
+	public static boolean isValid(String infos[]) {
+		boolean isValid = true;
+		
+		try {
+			int number = Integer.parseInt(infos[0]);
+			if(number < 0) {
+				System.out.println("Numero de rue invalide");
+				isValid = false;
+			}
+		} catch(NumberFormatException e) {
+			System.out.println("Numero de rue invalide");
+			isValid = false;
+		}
+		
+		if(!infos[1].matches("[a-zA-Z]+")) {
+			System.out.println("Nom de rue invalide");
+			isValid = false;
+		}
+		
+		return isValid;
+	}
+	
+	public int getStNumber() {
 		return stNumber;
 	}
 	
-	public void setStNumber(String stNumber) {
+	public void setStNumber(int stNumber) {
 		this.stNumber = stNumber;
 	}
 	
@@ -34,35 +48,4 @@ public class Address {
 		this.stName = stName;
 	}
 	
-	public String getPostalCode() {
-		return postalCode;
-	}
-	
-	public void setPostalCode(String postalCode) {
-		this.postalCode = postalCode;
-	}
-	
-	public Province getProvince() {
-		return province;
-	}
-	
-	public void setProvince(Province province) {
-		this.province = province;
-	}
-	
-	public String getCountry() {
-		return country;
-	}
-	
-	public void setCountry(String country) {
-		this.country = country;
-	}
-	
-	public String getCity() {
-		return city;
-	}
-	
-	public void setCity(String city) {
-		this.city = city;
-	}
 }

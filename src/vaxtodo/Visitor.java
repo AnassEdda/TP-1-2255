@@ -1,33 +1,71 @@
 package vaxtodo;
 
+import java.util.Random;
+
 public class Visitor {
 
 	private int accountNumber;
 	private String lastName;
 	private String firstName;
-	private String birthdate;
-	private String email;
 	private int phoneNumber;
+	private String email;
+	private String birthdate;
 	private Vaccine[] vaccines;
 
 	public Visitor(String lastName, String firstName, String birthdate, String email, int phoneNumber) {
 		this.lastName = lastName;
 		this.firstName = firstName;
-		this.birthdate = birthdate;
-		this.email = email;
 		this.phoneNumber = phoneNumber;
+		this.email = email;
+		this.birthdate = birthdate;
 		this.accountNumber = generateAccountNumber();
-		this.vaccines = null;
+		this.vaccines = new Vaccine[Vaccine.VACCINE_MAX_NUMBER];
 	}
 	
-	public boolean isValid() {
-		// TODO - implement Visitor.isValid
-		return false;
+	public boolean isValid(String[] infos) {
+		boolean isValid = true;
+
+		if(!infos[0].matches("[a-zA-Z]+")) {
+			System.out.println("Nom de famille invalide");
+			isValid = false;
+		}
+		
+		if(!infos[1].matches("[a-zA-Z]+")) {
+			System.out.println("Prenom invalide");
+			isValid = false;
+		}
+		
+		try {
+			Integer.parseInt(infos[2]);
+		} catch(NumberFormatException e) {
+			System.out.println("Numero de telephone invalide");
+			isValid = false;
+		}
+		if(infos[2].length() != 10) {
+			System.out.println("Numero de telephone invalide");
+			isValid = false;
+		}
+		
+		String[] emailVerif = infos[3].split("@");
+		if(emailVerif.length != 2) {
+			System.out.println("Adresse courriel invalide");
+			isValid = false;
+		}
+		
+		return isValid;
 	}
 
 	public int generateAccountNumber() {
-		// TODO - implement Visitor.generateAccountNumber
-		return 0;
+		int number = 0;
+		Random rand = new Random();
+		
+		for(int i = 0; i < 12; ++i) {
+			number += rand.nextInt() * Math.pow(10, i);
+		}
+		
+		//TODO verifier que number est unique
+		
+		return number;
 	}
 	
 	public int getAccountNumber() {
