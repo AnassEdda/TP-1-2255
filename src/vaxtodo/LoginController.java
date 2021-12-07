@@ -1,14 +1,23 @@
 package vaxtodo;
 
+import java.util.*;
+
 public class LoginController {
 
-	/**
-	 * 
-	 * @param username
-	 * @param password
-	 */
-	public void login(String username, String password) {
-		// TODO - implement LoginController.login
+	public User login() {
+		User user = null;
+		
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.println("Entrer votre code d'utilisateur");
+		String username = scanner.nextLine();
+		
+		System.out.println("Entrer votre mot de passe");
+		String password = scanner.nextLine();
+		
+		//TODO check if username/password is correct
+		
+		return user;
 	}
 
 	public void logout() {

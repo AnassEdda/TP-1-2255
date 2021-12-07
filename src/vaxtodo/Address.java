@@ -10,6 +10,18 @@ public class Address {
 		this.stName = stName;
 	}
 	
+	public Address(String infos) {
+		String[] address = infos.split(",");
+		
+		this.stNumber = Integer.parseInt(address[0]);
+		this.stName = address[1];
+	}
+	
+	@Override
+	public String toString() {
+		return stNumber + "," + stName;
+	}
+
 	public static boolean isValid(String infos[]) {
 		boolean isValid = true;
 		

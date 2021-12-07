@@ -16,6 +16,22 @@ public class Vaccine {
 		this.code = generateVaccineCode();
 	}
 	
+	public Vaccine(String infos) {
+		String[] vaccines = infos.split(",");
+		
+		this.date = vaccines[0];
+		this.doseNumber = Integer.parseInt(vaccines[1]);
+		this.code = vaccines[2];
+		this.vaccineName = VaxName.valueOf(vaccines[3]);
+	}
+	
+	
+	
+	@Override
+	public String toString() {
+		return date + "," + doseNumber + "," + code + "," + vaccineName;
+	}
+
 	public String generateVaccineCode() {
 		// TODO - implement Vaccine.generateVaccineCode
 		return null;

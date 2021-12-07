@@ -11,6 +11,19 @@ public class WorkingDay {
 		this.startTime = startTime;
 		this.endTime = endTime;
 	}
+	
+	public WorkingDay(String infos) {
+		String[] days = infos.split(",");
+		
+		this.date = days[0];
+		this.startTime = days[1];
+		this.endTime = days[2];
+	}
+
+	@Override
+	public String toString() {
+		return date + "," + startTime + "," + endTime;
+	}
 
 	public String getDate() {
 		return date;
