@@ -25,7 +25,7 @@ public class VisitorController {
             System.out.println("Vous etes identifier");
 
         }else {
-            System.out.println("veuillez créez un comptre ou vous connectez");
+            System.out.println("veuillez creer un compte ou vous connectez");
         }
 
 

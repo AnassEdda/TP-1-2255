@@ -40,8 +40,8 @@ public class Vaxtodoo {
 
                 case 2:
                     System.out.println("rentrez votre numéro de réservation:");
-                    int numDeRéservation = scanner.nextInt();
-                    reservationController.reservationVerify(numDeRéservation);
+                    int numDeReservation = scanner.nextInt();
+                    reservationController.reservationVerify(numDeReservation);
                     break;
 
 

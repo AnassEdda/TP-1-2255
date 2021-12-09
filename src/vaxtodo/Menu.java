@@ -11,24 +11,25 @@ public class Menu {
 		login = new LoginController();
 		reservation = new ReservationController();
 		visitor = new VisitorController();
-		currentUser = login.login();
 	}
 
 	public void open() {
-		// TODO - implement Menu.open
+		currentUser = login.login();
+		displayMenu();
 	}
 
 	public User getCurrentUser() {
-		// TODO - implement Menu.getCurrentUser
-		return null;
+		return currentUser;
 	}
 	
-	public void setCurrentUser() {
-		
+	public void setCurrentUser(User user) {
+		currentUser = user;
 	}
 
 	public void displayMenu() {
-		// TODO - implement Menu.displayMenu
+		
+		
+		
 	}
 
 	public void displayLogin() {
@@ -48,7 +49,7 @@ public class Menu {
 	 * @param msg
 	 */
 	public void printError(String msg) {
-		// TODO - implement Menu.printError
+		System.out.println(msg);
 	}
 
 	public void exit() {

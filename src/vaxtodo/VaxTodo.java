@@ -7,14 +7,21 @@ public class VaxTodo {
 
 	public static LinkedList<User> users;
 	public static LinkedList<Visitor> visitors;
+	public static PriorityQueue<Reservation> reservations;
 	
 	public static void main(String args[]) throws IOException {
 		users = readUsers();
 		visitors = readVisitors();
+		reservations = readReservations();
+		
+		//Menu menu = new Menu();
+		//menu.open();
 		writeUsers();
 		writeVisitors();
+		writeReservations();
 	}
 	
+	//read stored users from users.txt
 	private static LinkedList<User> readUsers() throws IOException {
 		LinkedList<User> users = new LinkedList<User>();
 		
@@ -54,20 +61,20 @@ public class VaxTodo {
 		return users;
 	}
 	
+	//write users to users.txt before the program terminates
 	private static void writeUsers() throws IOException {
 		BufferedWriter out = new BufferedWriter(new FileWriter("vaxtodo/bin/users.txt"));
 		
-		String line = "";
+		out.write("");
 		
 		for(User user : VaxTodo.users) {
-			line += user.toString() + "\n";
+			out.append(user.toString() + "\n");
 		}
-		
-		out.write(line);
 		
 		out.close();
 	}
 	
+	//read stored visitors from visitors.txt
 	private static LinkedList<Visitor> readVisitors() throws IOException {
 		LinkedList<Visitor> visitors = new LinkedList<Visitor>();
 		
@@ -105,16 +112,50 @@ public class VaxTodo {
 		return visitors;
 	}
 	
+	//write visitors to visitors.txt before the program terminates
 	private static void writeVisitors() throws IOException {
 		BufferedWriter out = new BufferedWriter(new FileWriter("vaxtodo/bin/visitors.txt"));
 		
-		String line = "";
+		out.write("");
 		
 		for(Visitor visitor : VaxTodo.visitors) {
-			line += visitor.toString() + "\n";
+			out.append(visitor.toString() + "\n");
 		}
 		
-		out.write(line);
+		out.close();
+	}
+	
+	//read stored reservations from reservations.txt
+	private static PriorityQueue<Reservation> readReservations() throws IOException {
+		PriorityQueue<Reservation> reservations = new PriorityQueue<Reservation>();
+		
+		BufferedReader in = new BufferedReader(new FileReader("vaxtodo/bin/reservations.txt"));
+		
+		String line;
+		while((line = in.readLine()) != null)
+		{
+			String[] infos = line.split(" ");
+			int reservationNumber = Integer.parseInt(infos[0]);
+			String lastName = infos[1];
+			String firstName = infos[2];
+			String visitDate = infos[3];
+			String visitTime = infos[4];
+			int doseNumber = Integer.parseInt(infos[5]);
+			
+			reservations.add(new Reservation(reservationNumber, lastName, firstName, visitDate, visitTime, doseNumber));
+		}
+		return reservations;
+	}		
+	
+	//write reservations to reservations.txt before the program terminates
+	private static void writeReservations() throws IOException {
+		BufferedWriter out = new BufferedWriter(new FileWriter("vaxtodo/bin/reservations.txt"));
+		
+		out.write("");
+		
+		for(Reservation reservation : VaxTodo.reservations) {
+			out.append(reservation.toString() + "\n");
+		}
 		
 		out.close();
 	}

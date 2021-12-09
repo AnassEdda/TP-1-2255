@@ -1,6 +1,8 @@
 package vaxtodo;
 
-public class Reservation {
+import java.util.*;
+
+public class Reservation implements Comparable<Reservation>{
 
 	private int reservationNumber;
 	private String lastName;
@@ -16,6 +18,15 @@ public class Reservation {
 		this.visitTime = visitTime;
 		this.doseNumber = doseNumber;
 		this.reservationNumber = generateReservationNumber();
+	}
+	
+	public Reservation(int reservationNumber, String lastName, String firstName, String visitDate, String visitTime, int doseNumber) {
+		this.reservationNumber = reservationNumber;
+		this.lastName = lastName;
+		this.firstName = firstName;
+		this.visitDate = visitDate;
+		this.visitTime = visitTime;
+		this.doseNumber = doseNumber;
 	}
 
 	public boolean isValid(String[] infos) {
@@ -69,10 +80,58 @@ public class Reservation {
 		
 		return isValid;
 	}
+	
+	@Override
+	public int compareTo(Reservation r) {
+		
+		
+		String[] temp1 = this.visitDate.split("-");
+		String[] temp2 = r.visitDate.split("-");
+		int[] date1 = new int[temp1.length];
+		int[] date2 = new int[temp2.length];
+		
+		for(int i = 0; i < temp1.length; ++i) {
+			date1[i] = Integer.parseInt(temp1[i]);
+			date2[i] = Integer.parseInt(temp2[i]);
+		}
+		
+		if(date1[0] != date2[0]) return date1[0] - date2[0];
+		else if(date1[1] != date2[1]) return date1[1] - date2[1];
+		else if(date1[2] != date2[2]) return date1[2] - date2[2];
+		
+		String[] temp3 = this.visitTime.split(":");
+		String[] temp4 = r.visitTime.split(":");
+		int[] time1 = new int[temp3.length];
+		int[] time2 = new int[temp4.length];
+		for(int i = 0; i < temp3.length; ++i) {
+			time1[i] = Integer.parseInt(temp3[i]);
+			time2[i] = Integer.parseInt(temp4[i]);
+		}
+		if(time1[0] != time2[0]) return time1[0] - time2[0];
+		else if(time1[1] != time2[1]) return time1[1] - time2[1];
+		
+		return 0;
+	}
 
 	public int generateReservationNumber() {
-		// TODO - implement Reservation.generateReservationNumber
-		return 0;
+		int number = 0;
+		Random rand = new Random();
+		
+		for(int i = 0; i < 6; ++i) {
+			number += rand.nextInt() * Math.pow(10, i);
+		}
+		
+		for(Reservation reservation : VaxTodo.reservations) {
+			if(reservation.reservationNumber == number) return generateReservationNumber();
+		}
+		
+		return number;
+	}
+
+	@Override
+	public String toString() {
+		return reservationNumber + " " + lastName + " " + firstName 
+				+ " " + visitDate + " " + visitTime + " " + doseNumber;
 	}
 
 	public int getReservationNumber() {
