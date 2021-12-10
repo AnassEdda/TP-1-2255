@@ -29,7 +29,7 @@ public class Reservation implements Comparable<Reservation>{
 		this.doseNumber = doseNumber;
 	}
 
-	public boolean isValid(String[] infos) {
+	public static boolean isValid(String[] infos) {
 		boolean isValid = true;
 		
 		if(!infos[0].matches("[a-zA-Z]+")) {
@@ -47,7 +47,7 @@ public class Reservation implements Comparable<Reservation>{
 		for(int i = 0; i < date.length; ++i) {
 			dateInt[i] = Integer.parseInt(date[i]);
 		}
-		if(date.length != 3 || dateInt[2] < 1 || dateInt[2] > 31 || dateInt[1] < 1 || dateInt[1] > 12 || dateInt[0] > 2021) {
+		if(date.length != 3 || dateInt[2] < 1 || dateInt[2] > 31 || dateInt[1] < 1 || dateInt[1] > 12 || dateInt[0] < 2021) {
 			System.out.println("Date invalide");
 			isValid = false;
 		}
@@ -56,7 +56,7 @@ public class Reservation implements Comparable<Reservation>{
 			String[] time = infos[3].split(":");
 			int[] timeInt = new int[time.length];
 			for(int i = 0; i < time.length; ++i) {
-				timeInt[i] = Integer.parseInt(date[i]);
+				timeInt[i] = Integer.parseInt(time[i]);
 			}
 			if(time.length != 2 || timeInt[0] < 0 || timeInt[1] < 0 || timeInt[0] > 24 || timeInt[1] > 60) {
 				System.out.println("Heure de rendez-vous invalide");
@@ -83,8 +83,6 @@ public class Reservation implements Comparable<Reservation>{
 	
 	@Override
 	public int compareTo(Reservation r) {
-		
-		
 		String[] temp1 = this.visitDate.split("-");
 		String[] temp2 = r.visitDate.split("-");
 		int[] date1 = new int[temp1.length];
@@ -118,7 +116,7 @@ public class Reservation implements Comparable<Reservation>{
 		Random rand = new Random();
 		
 		for(int i = 0; i < 6; ++i) {
-			number += rand.nextInt() * Math.pow(10, i);
+			number += rand.nextInt(10) * Math.pow(10, i);
 		}
 		
 		for(Reservation reservation : VaxTodo.reservations) {

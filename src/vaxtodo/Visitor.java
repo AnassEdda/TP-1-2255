@@ -60,7 +60,7 @@ public class Visitor {
 		return text;
 	}
 	
-	public boolean isValid(String[] infos) {
+	public static boolean isValid(String[] infos) {
 		boolean isValid = true;
 
 		if(!infos[0].matches("[a-zA-Z]+")) {

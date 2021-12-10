@@ -8,10 +8,17 @@ public class LoginController {
 		
 		Scanner scanner = new Scanner(System.in);
 		
-		System.out.println("Entrer votre code d'utilisateur");
-		long code = scanner.nextLong();
+		System.out.println("Entrer votre code d'utilisateur : ");
+		long code;
+		try {
+			code = scanner.nextLong();
+		} catch (InputMismatchException e) {
+			System.out.println("Le code d'utilisateur dois etre un nombre");
+			return login();
+		}
 		
-		System.out.println("Entrer votre mot de passe");
+		System.out.println("Entrer votre mot de passe : ");
+		scanner.nextLine();
 		String password = scanner.nextLine();
 		
 		for(User user : VaxTodo.users) {

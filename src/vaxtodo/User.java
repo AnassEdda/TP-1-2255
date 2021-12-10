@@ -83,7 +83,7 @@ public class User {
 		return text;
 	}
 
-	public boolean isValid(String[] infos) {
+	public static boolean isValid(String[] infos) {
 		boolean isValid = true;
 		
 		//TODO password check (infos[0])
@@ -158,7 +158,7 @@ public class User {
 		Random rand = new Random();
 		
 		for(int i = 0; i < 12; ++i) {
-			number += rand.nextInt() * Math.pow(10, i);
+			number += rand.nextInt(10) * Math.pow(10, i);
 		}
 		
 		for(User user : VaxTodo.users) {
@@ -173,7 +173,7 @@ public class User {
 		Random rand = new Random();
 		
 		for(int i = 0; i < 9; ++i) {
-			code += rand.nextInt() * Math.pow(10, i);
+			code += rand.nextInt(10) * Math.pow(10, i);
 		}
 		
 		for(User user : VaxTodo.users) {
