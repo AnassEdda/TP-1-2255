@@ -269,14 +269,22 @@ public class VisitorController {
 		return visitor;
 	}
 
-	public ArrayList<Visitor> visitorList(){
-		ArrayList<Visitor> result= new ArrayList();
-
+	public void visitorList(){
+		
+		System.out.println("\nAffichage des informations des visiteurs");
+		
 		for (Visitor visitor: VaxTodo.visitors){
-			result.add(visitor);
+			int nVaccines = 0;
+			for(Vaccine vax : visitor.getVaccines()) {
+				if(vax == null) break;
+				nVaccines++;
+			}
+			
+			System.out.println(visitor.getFirstName() + " " + visitor.getLastName() + ", " + visitor.getEmail() + ", numero de telephone : " 
+														+ visitor.getPhoneNumber() + ", nombre de doses : " + nVaccines);
 
 		}
-		return result ;
+
 	}
 
 }

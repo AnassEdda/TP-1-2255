@@ -105,5 +105,16 @@ public class ReservationController {
 	public void notifyVisitors() {
 		
 	}
+	
+	public void reservationList(){
+		System.out.println("\nAffichage des informations des reservations");
+		
+		for (Reservation reservation: VaxTodo.reservations){
+			
+			System.out.println(reservation.getFirstName() + " " + reservation.getLastName() + ", le " + reservation.getVisitDate() + " a " 
+					+ reservation.getVisitTime() + " pour une " + String.valueOf(reservation.getDoseNumber()) + "e dose");
+
+		}
+	}
 
 }

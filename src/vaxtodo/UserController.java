@@ -23,12 +23,24 @@ public void createUser() {
 		return null;
 	}
 
-	public ArrayList<User> userList(){
-	    ArrayList<User> result= new ArrayList();
-	    for (User user: VaxTodo.users){
-	    	result.add(user);
-	    }
-			return result;
+	public void userList(){
+		System.out.println("\nAffichage des informations des utilisateurs");
+		
+		for (User user: VaxTodo.users){
+			
+			String nextShift = "";
+			
+			if(user.getSchedule() == null) {
+				nextShift = "aucun quart de travail planifie";
+			}else {
+				nextShift = "prochain quart de travail : " + user.getSchedule()[0].getDate() + ", de " 
+							+ user.getSchedule()[0].getStartTime() + " a " + user.getSchedule()[0].getEndTime();
+			}
+			
+			System.out.println(user.getFirstName() + " " + user.getLastName() + ", " + user.getEmail() + ", numero de telephone : " 
+														+ user.getPhoneNumber() + ", " + nextShift);
+
+		}
 	}
 	
 }

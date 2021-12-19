@@ -173,7 +173,7 @@ public class Menu {
 		Scanner scanner = new Scanner(System.in);
         boolean isContinue = true;
         while (isContinue) {
-            System.out.println("\n1. Consulter le calendrier");
+            System.out.println("\n1. Consulter la liste des reservations");
             System.out.println("2. Consulter la liste des visiteurs");
             System.out.println("3. Consulter la liste des utilisateurs");
             System.out.println("4. Quitter le menu de la consultation d'informations");
@@ -183,7 +183,7 @@ public class Menu {
 
             switch (choice) {
                 case 1:
-                	
+                	reservation.reservationList();
                 	break;
                 case 2:
                     visitor.visitorList();
