@@ -154,8 +154,8 @@ public class VaxTodo {
 		
 		out.write("");
 		
-		for(Reservation reservation : VaxTodo.reservations) {
-			out.append(reservation.toString() + "\n");
+		while(!reservations.isEmpty()){
+			out.append(reservations.poll().toString() + "\n");
 		}
 		
 		out.close();

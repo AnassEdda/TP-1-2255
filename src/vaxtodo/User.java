@@ -124,7 +124,7 @@ public class User {
 			isValid = false;
 		}
 		
-		if(infos[6].length() != 6 && !infos[7].matches("[A-Z0-9]+")) {
+		if(!infos[6].matches("[A-Z0-9]+")) {
 			System.out.println("Code postal invalide");
 			isValid = false;
 		}
@@ -136,16 +136,17 @@ public class User {
 		
 		try {
 			Long.parseLong(infos[8]);
+			if(infos[8].length() != 10) {
+				System.out.println("Numero de telephone invalide");
+				isValid = false;
+			}
 		} catch(NumberFormatException e) {
 			System.out.println("Numero de telephone invalide");
 			isValid = false;
 		}
-		if(infos[8].length() != 10) {
-			System.out.println("Numero de telephone invalide");
-			isValid = false;
-		}
 		
-		if(!infos[9].equals("NON") || !infos[9].equals("OUI")) {
+		
+		if(!infos[9].equals("NON") && !infos[9].equals("OUI")) {
 			System.out.println("Entrer OUI ou NON lors de la demande de si l'utilisateur est un employe");
 			isValid = false;
 		}
@@ -158,7 +159,7 @@ public class User {
 		Random rand = new Random();
 		
 		for(int i = 0; i < 12; ++i) {
-			number += rand.nextInt(10) * Math.pow(10, i);
+			number += (rand.nextInt(9) + 1) * Math.pow(10, i);
 		}
 		
 		for(User user : VaxTodo.users) {
@@ -173,7 +174,7 @@ public class User {
 		Random rand = new Random();
 		
 		for(int i = 0; i < 9; ++i) {
-			code += rand.nextInt(10) * Math.pow(10, i);
+			code += (rand.nextInt(9) + 1) * Math.pow(10, i);
 		}
 		
 		for(User user : VaxTodo.users) {

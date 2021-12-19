@@ -44,17 +44,22 @@ public class Reservation implements Comparable<Reservation>{
 		
 		String[] date = infos[2].split("-");
 		int[] dateInt = new int[date.length];
-		for(int i = 0; i < date.length; ++i) {
-			dateInt[i] = Integer.parseInt(date[i]);
-		}
-		if(date.length != 3 || dateInt[2] < 1 || dateInt[2] > 31 || dateInt[1] < 1 || dateInt[1] > 12 || dateInt[0] < 2021) {
-			System.out.println("Date invalide");
+		try {
+			for(int i = 0; i < date.length; ++i) {
+				dateInt[i] = Integer.parseInt(date[i]);
+			}
+			if(date.length != 3 || dateInt[2] < 1 || dateInt[2] > 31 || dateInt[1] < 1 || dateInt[1] > 12 || dateInt[0] < 2021) {
+				System.out.println("Date de reservation invalide");
+				isValid = false;
+			}
+		} catch(NumberFormatException e) {
+			System.out.println("Date de reservation invalide");
 			isValid = false;
 		}
 		
+		String[] time = infos[3].split(":");
+		int[] timeInt = new int[time.length];
 		try {
-			String[] time = infos[3].split(":");
-			int[] timeInt = new int[time.length];
 			for(int i = 0; i < time.length; ++i) {
 				timeInt[i] = Integer.parseInt(time[i]);
 			}
@@ -65,6 +70,31 @@ public class Reservation implements Comparable<Reservation>{
 		} catch(NumberFormatException e) {
 			System.out.println("Heure de rendez-vous invalide");
 			isValid = false;
+		}
+		
+		PriorityQueue<Reservation> queue = new PriorityQueue<Reservation>(VaxTodo.reservations);
+		//Regarde si la plage horaire choisie est remplie
+		String currentDate = "";
+		int timeSlotCount = 0;
+		while(!queue.isEmpty()){
+			Reservation currentRes = queue.poll();
+			int newTimeSlot = Integer.parseInt(currentRes.getVisitTime().split(":")[0]);
+			
+			if(!currentRes.getVisitDate().equals(currentDate)) {
+				currentDate = currentRes.getVisitDate();
+				timeSlotCount = 1;
+			}else {
+				if(timeInt[0] == newTimeSlot) {
+					timeSlotCount++;
+					if(timeSlotCount == 15) {
+						isValid = false;
+						System.out.println("La plage horaire le " + infos[2] + " a " + infos[3] + " est remplie");
+					}
+				}else {
+					currentDate = currentRes.getVisitDate();
+					timeSlotCount = 1;
+				}
+			}
 		}
 		
 		try {
@@ -93,20 +123,27 @@ public class Reservation implements Comparable<Reservation>{
 			date2[i] = Integer.parseInt(temp2[i]);
 		}
 		
-		if(date1[0] != date2[0]) return date1[0] - date2[0];
-		else if(date1[1] != date2[1]) return date1[1] - date2[1];
-		else if(date1[2] != date2[2]) return date1[2] - date2[2];
+		if(date1[0] > date2[0]) return 1;
+		if(date1[0] < date2[0]) return -1;
+		if(date1[1] > date2[1]) return 1;
+		if(date1[1] < date2[1]) return -1;
+		if(date1[2] > date2[2]) return 1;
+		if(date1[2] < date2[2]) return -1;
 		
 		String[] temp3 = this.visitTime.split(":");
 		String[] temp4 = r.visitTime.split(":");
+		
 		int[] time1 = new int[temp3.length];
 		int[] time2 = new int[temp4.length];
 		for(int i = 0; i < temp3.length; ++i) {
 			time1[i] = Integer.parseInt(temp3[i]);
 			time2[i] = Integer.parseInt(temp4[i]);
 		}
-		if(time1[0] != time2[0]) return time1[0] - time2[0];
-		else if(time1[1] != time2[1]) return time1[1] - time2[1];
+		
+		if(time1[0] > time2[0]) return 1;
+		if(time1[0] < time2[0]) return -1;
+		if(time1[1] > time2[1]) return 1;
+		if(time1[1] < time2[1]) return -1;
 		
 		return 0;
 	}
@@ -116,7 +153,7 @@ public class Reservation implements Comparable<Reservation>{
 		Random rand = new Random();
 		
 		for(int i = 0; i < 6; ++i) {
-			number += rand.nextInt(10) * Math.pow(10, i);
+			number += (rand.nextInt(9) + 1) * Math.pow(10, i);
 		}
 		
 		for(Reservation reservation : VaxTodo.reservations) {

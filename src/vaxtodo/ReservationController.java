@@ -1,6 +1,6 @@
 package vaxtodo;
 
-import java.util.Scanner;
+import java.util.*;
 
 public class ReservationController {
 
@@ -28,6 +28,7 @@ public class ReservationController {
 		
 		if(Reservation.isValid(infos)) {
 			VaxTodo.reservations.add(new Reservation(infos[0], infos[1], infos[2], infos[3], Integer.parseInt(infos[4])));
+			System.out.println(Arrays.toString(VaxTodo.reservations.toArray()));
 			System.out.println("Reservation creee");
 			return;
 		}
@@ -108,11 +109,13 @@ public class ReservationController {
 	
 	public void reservationList(){
 		System.out.println("\nAffichage des informations des reservations");
+		PriorityQueue<Reservation> queue = new PriorityQueue<Reservation>(VaxTodo.reservations);
 		
-		for (Reservation reservation: VaxTodo.reservations){
+		while(!queue.isEmpty()){
+			Reservation temp = queue.poll();
 			
-			System.out.println(reservation.getFirstName() + " " + reservation.getLastName() + ", le " + reservation.getVisitDate() + " a " 
-					+ reservation.getVisitTime() + " pour une " + String.valueOf(reservation.getDoseNumber()) + "e dose");
+			System.out.println(temp.getFirstName() + " " + temp.getLastName() + ", le " + temp.getVisitDate() + " a " 
+					+ temp.getVisitTime() + " pour une " + String.valueOf(temp.getDoseNumber()) + "e dose");
 
 		}
 	}

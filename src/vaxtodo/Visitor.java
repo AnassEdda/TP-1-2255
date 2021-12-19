@@ -100,7 +100,7 @@ public class Visitor {
 			isValid = false;
 		}
 		
-		if(infos[5].length() != 6 && !infos[5].matches("[A-Z0-9]+")) {
+		if(!infos[5].matches("[A-Z0-9]+")) {
 			System.out.println("Code postal invalide");
 			isValid = false;
 		}
@@ -112,11 +112,11 @@ public class Visitor {
 		
 		try {
 			Long.parseLong(infos[7]);
+			if(infos[7].length() != 10) {
+				System.out.println("Numero de telephone invalide");
+				isValid = false;
+			}
 		} catch(NumberFormatException e) {
-			System.out.println("Numero de telephone invalide");
-			isValid = false;
-		}
-		if(infos[7].length() != 10) {
 			System.out.println("Numero de telephone invalide");
 			isValid = false;
 		}
@@ -129,7 +129,7 @@ public class Visitor {
 		Random rand = new Random();
 		
 		for(int i = 0; i < 12; ++i) {
-			number += rand.nextInt(10) * Math.pow(10, i);
+			number += (rand.nextInt(9) + 1) * Math.pow(10, i);
 		}
 		
 		for(Visitor visitor : VaxTodo.visitors) {

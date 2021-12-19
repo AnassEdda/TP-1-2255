@@ -77,11 +77,11 @@ public class VisitorController {
 		}
 		
 		System.out.println("Le numero de compte du visiteur n'existe pas");
-		System.out.println("Voulez vous reessayer de supprimer un visiteur? (OUI/NON)");
+		System.out.println("Voulez vous reessayer de modifier un visiteur? (OUI/NON)");
 		String decision = scanner.nextLine();
 		
 		if(decision.equals("OUI")) {
-			deleteVisitor();
+			modifyVisitor();
 		}
 		return;
 	}
@@ -103,7 +103,7 @@ public class VisitorController {
 		for(Visitor visitor : VaxTodo.visitors) {
 			if(visitor.getAccountNumber() == number) {
 				VaxTodo.visitors.remove(visitor);
-				System.out.println("Le visiteur a ete supprime");
+				System.out.println("Le compte de " + visitor.getFirstName() + " " + visitor.getLastName() + " a ete supprime");
 				return;
 			}
 		}
