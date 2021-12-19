@@ -1,7 +1,7 @@
 package vaxtodo;
 
-import java.util.Arrays;
-import java.util.Random;
+import java.util.*;
+
 
 public class Visitor {
 
@@ -50,7 +50,7 @@ public class Visitor {
 				+ birthdate + " " + email + " " + address.toString() + " "
 				+ postalCode + " " +city + " " + phoneNumber + " ";
 		
-		if(vaccines == null) text += "empty";
+		if(vaccines[0] == null) text += "empty";
 		else {
 			for(int i = 0; i < vaccines.length - 1; ++i) {
 				text += vaccines[i].toString() + "/";
@@ -99,7 +99,7 @@ public class Visitor {
 			isValid = false;
 		}
 		
-		if(infos[5].length() != 6) {
+		if(infos[5].length() != 6 && !infos[5].matches("[A-Z0-9]+")) {
 			System.out.println("Code postal invalide");
 			isValid = false;
 		}
@@ -110,7 +110,7 @@ public class Visitor {
 		}
 		
 		try {
-			Integer.parseInt(infos[7]);
+			Long.parseLong(infos[7]);
 		} catch(NumberFormatException e) {
 			System.out.println("Numero de telephone invalide");
 			isValid = false;

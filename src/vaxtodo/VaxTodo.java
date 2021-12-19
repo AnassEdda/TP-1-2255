@@ -97,7 +97,7 @@ public class VaxTodo {
 		    long phoneNumber = Long.parseLong(infos[8]);
 		    
 		    if(infos[9].equals("empty")) {
-		    	visitors.add(new Visitor(accountNumber, lastName, firstName, birthdate, email, address, postalCode, city, phoneNumber, null));
+		    	visitors.add(new Visitor(accountNumber, lastName, firstName, birthdate, email, address, postalCode, city, phoneNumber, new Vaccine[Vaccine.VACCINE_MAX_NUMBER]));
 		    }else {
 		    	String[] tempVax = infos[9].split("/");
 			    Vaccine[] vaccines = new Vaccine[tempVax.length];

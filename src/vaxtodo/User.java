@@ -124,7 +124,7 @@ public class User {
 			isValid = false;
 		}
 		
-		if(infos[6].length() != 6) {
+		if(infos[6].length() != 6 && !infos[7].matches("[A-Z0-9]+")) {
 			System.out.println("Code postal invalide");
 			isValid = false;
 		}
@@ -135,7 +135,7 @@ public class User {
 		}
 		
 		try {
-			Integer.parseInt(infos[8]);
+			Long.parseLong(infos[8]);
 		} catch(NumberFormatException e) {
 			System.out.println("Numero de telephone invalide");
 			isValid = false;
