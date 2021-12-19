@@ -186,10 +186,10 @@ public class Menu {
                 	
                 	break;
                 case 2:
-                	
+                    visitor.visitorList();
                 	break;
                 case 3:
-                	
+                    user.userList();
                 	break;
                 case 4:
                 	isContinue = false;

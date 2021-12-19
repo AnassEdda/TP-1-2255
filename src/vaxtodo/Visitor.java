@@ -29,7 +29,7 @@ public class Visitor {
 		this.city = city;
 		this.vaccines = new Vaccine[Vaccine.VACCINE_MAX_NUMBER];
 	}
-	
+
 	//constructor used when fetching Visitors from storage
 	public Visitor(long accountNumber, String lastName, String firstName, String birthdate, String email, Address address, String postalCode, String city, long phoneNumber, Vaccine[] vaccines) {
 		this.accountNumber = accountNumber;
@@ -43,7 +43,8 @@ public class Visitor {
 		this.city = city;
 		this.vaccines = vaccines;
 	}
-	
+
+
 	@Override
 	public String toString() {
 		String text = accountNumber + " " + lastName + " " + firstName + " "
@@ -136,6 +137,9 @@ public class Visitor {
 		}
 		return number;
 	}
+
+
+
 
 	public long getAccountNumber() {
 		return accountNumber;

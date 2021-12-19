@@ -1,5 +1,6 @@
 package vaxtodo;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class VisitorController {
@@ -266,6 +267,16 @@ public class VisitorController {
         }
 		
 		return visitor;
+	}
+
+	public ArrayList<Visitor> visitorList(){
+		ArrayList<Visitor> result= new ArrayList();
+
+		for (Visitor visitor: VaxTodo.visitors){
+			result.add(visitor);
+
+		}
+		return result ;
 	}
 
 }
