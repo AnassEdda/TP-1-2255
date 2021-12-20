@@ -14,6 +14,39 @@ un « case  » dans une boucle while. Tout les différent menus du CRM fonctio
 L’authentification des visiteurs ou utilisateurs se fait au travers du logiciel dans l’interface « Login » ou un numéro d’utilisateur
 et un mot de passe est requis. Ces données sont enregistré dans un tableau qui sert de références lors des différentes connexions des utilisateurs.
 
+#Menu
+1. Changer le compte utilisateur
+2. Gestion de reservation
+3. Gestion de visiteurs
+4. Gestion d'utilisateurs
+5. Consultation d'informations
+6. Rapport de vaccination
+7. Quitter
+
+#demande de Rapport vaccinale
+1. Creer un rapport
+2. Envoyer le rapport
+
+#gestion des visiteurs
+1. Creer un visiteur
+2. Supprimer un visiteur
+3. Modifier un visiteur
+4. Quitter le menu des visiteurs
+
+#gestion des utilisateurs
+1. Creer un utilisateur
+2. Supprimer un utilisateur
+3. Modifier un utilisateur
+4. Quitter le menu des utilisateurs
+
+#Montrer info
+1. Consulter le calendrier
+2. Consulter la liste des visiteurs
+3. Consulter la liste des utilisateurs
+4. Quitter le menu de la consultation d'informations
+
+
+
 Listes de Bugs connu: Aucun
 
 (aucun changeLog)
