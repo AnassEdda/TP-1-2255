@@ -54,16 +54,19 @@ public class Menu {
                     displayReservation();
                     break;
                 case 3:
-                    displayVisitor();
+                	if(currentUser.isEmployee()) displayVisitor();
+                	else System.out.println("Seulement les employes peuvent gerer les comptes visiteurs");
                     break;
                 case 4:
-                    displayUser();
+                	if(currentUser.isEmployee()) displayUser();
+                	else System.out.println("Seulement les employes peuvent gerer les comptes utilisateurs");
                     break;
                 case 5:
                     displayInfo();
                     break;
                 case 6:
-                    getVacciationReport();
+                	if(currentUser.isEmployee()) getVacciationReport();
+                	else System.out.println("Seulement les employes peuvent gerer les rapports de vaccination");
                     break;
                 case 7:
                     isContinue = false;
@@ -214,7 +217,8 @@ public class Menu {
                     visitor.visitorList();
                     break;
                 case 3:
-                    user.userList();
+                	if(currentUser.isEmployee()) user.userList();
+                	else System.out.println("Seulement les employes peuvent consulter la liste des utilisateurs");
                     break;
                 case 4:
                     isContinue = false;

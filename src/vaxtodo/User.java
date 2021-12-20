@@ -154,8 +154,8 @@ public class User {
 		return isValid;
 	}
 	
-	public int generateAccountNumber() {
-		int number = 0;
+	public long generateAccountNumber() {
+		long number = 0;
 		Random rand = new Random();
 		
 		for(int i = 0; i < 12; ++i) {
@@ -169,8 +169,8 @@ public class User {
 		return number;
 	}
 	
-	public int generateUserCode() {
-		int code = 0;
+	public long generateUserCode() {
+		long code = 0;
 		Random rand = new Random();
 		
 		for(int i = 0; i < 9; ++i) {
