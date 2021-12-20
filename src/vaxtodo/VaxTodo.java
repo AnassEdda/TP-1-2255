@@ -14,6 +14,11 @@ public class VaxTodo {
 		visitors = readVisitors();
 		reservations = readReservations();
 		
+		/*
+		UserTest test = new UserTest();
+		test.runTests();
+		*/
+		
 		Menu menu = new Menu();
 		menu.open();
 		
